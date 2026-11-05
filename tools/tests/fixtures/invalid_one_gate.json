@@ -1,0 +1,291 @@
+{
+  "pursuit": "Northstar Citizen Services Portal",
+  "rfp": "AVL-2026-041",
+  "decision": "bid_with_partner",
+  "human_owner": "Priya Raman, Bid Director",
+  "human_signoff": true,
+  "decision_date": "2026-10-24",
+  "data_note": "All names, dates, figures, and documents are fictional synthetic sample data.",
+  "requirements": [
+    {
+      "id": "M1",
+      "text": "ISO 27001 certification at submission",
+      "status": "partner_covered",
+      "evidence": "Helix Systems current ISO 27001 certificate, scope and expiry to be attached by 2026-10-27."
+    },
+    {
+      "id": "M2",
+      "text": "Five comparable public-sector references in the last five years",
+      "status": "partner_covered",
+      "evidence": "Meridian provides four references; Helix provides the fifth (City of Norvale, 2025)."
+    },
+    {
+      "id": "M3",
+      "text": "24/7 support with one-hour P1 response",
+      "status": "met",
+      "evidence": "Meridian in-house 24/7 tier 1/2 support with engineering escalation, one-hour P1 response target, and sample P1 SLA (Capabilities §4)."
+    },
+    {
+      "id": "M4",
+      "text": "Production release for six services within six months of award",
+      "status": "partner_covered",
+      "evidence": "Meridian delivery manager plus Helix delivery lead cover months 1-3; six-service delivery plan with milestones is in Capabilities §6.1."
+    },
+    {
+      "id": "M5",
+      "text": "WCAG 2.2 AA compliance",
+      "status": "met",
+      "evidence": "Meridian has WCAG 2.2 AA conformance reports for two public-sector projects (Capabilities §2)."
+    },
+    {
+      "id": "M6",
+      "text": "Data residency in Avalon or an approved cloud region",
+      "status": "met",
+      "evidence": "Meridian hosts in the Avalon North cloud region, an approved region under RFP Appendix A (Capabilities §2)."
+    }
+  ],
+  "scores": {
+    "technical": {
+      "weight": 40,
+      "score": 4.0,
+      "evidence": "Helix adds ISO 27001, accessibility, and delivery-lead coverage; Meridian has two comparable portal builds."
+    },
+    "past_performance": {
+      "weight": 25,
+      "score": 4.0,
+      "evidence": "Four Meridian references plus Helix's City of Norvale reference meet the five-reference requirement."
+    },
+    "price": {
+      "weight": 20,
+      "score": 1.0,
+      "evidence": "Partner $2.50M at 11% margin; price score 1."
+    },
+    "supplier_diversity": {
+      "weight": 15,
+      "score": 4.0,
+      "evidence": "Meridian is a small business; Helix holds a recognised Avalon supplier-diversity certification."
+    }
+  },
+  "total_score": 68.0,
+  "base_total_score": 46.0,
+  "gates": [
+    {
+      "id": "G2",
+      "text": "Weighted qualification score at least 65/100",
+      "status": "pass",
+      "evidence": "Partner score 68/100."
+    }
+  ],
+  "margin_percent": 11.0,
+  "policy_min_margin_percent": 15.0,
+  "margin_exception": {
+    "approved_by": "Dana Okafor, VP Finance",
+    "reason": "Strategic entry into the Avalon Department of Citizen Services; partner margin exception approved with conditions.",
+    "date": "2026-10-23",
+    "approved_by_role": "VP of Finance",
+    "record_ref": "Room message from Priya Raman, 2026-10-23 (fictional)."
+  },
+  "conditions": [
+    {
+      "text": "Buyer response to the submission deadline clarification (2026-10-28 vs 2026-10-30)",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-26",
+      "status": "open"
+    },
+    {
+      "text": "Helix ISO 27001 certificate and fifth-reference letter",
+      "owner": "Marco Chen",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Helix delivery-lead written commitment for months 1-3",
+      "owner": "Marco Chen",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "VP Finance margin exception recorded in the decision record",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-24",
+      "status": "done"
+    },
+    {
+      "text": "VP of Delivery sign-off on the capacity mitigation",
+      "owner": "VP of Delivery",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Supplier diversity plan evidence for the 15% criterion",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Final bid/no-bid confirmation after conditions close",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Buyer response on Attachment C and page-limit/formatting requirements",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-26",
+      "status": "open"
+    }
+  ],
+  "actions": [
+    {
+      "text": "Submit deadline clarification question through the buyer portal",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-19",
+      "status": "done"
+    },
+    {
+      "text": "Collect Helix ISO certificate and fifth-reference letter",
+      "owner": "Marco Chen",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Obtain Helix delivery-lead written commitment",
+      "owner": "Marco Chen",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Record VP Finance margin exception",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-24",
+      "status": "done"
+    },
+    {
+      "text": "Obtain VP of Delivery sign-off",
+      "owner": "VP of Delivery",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Collect supplier diversity plan evidence",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Confirm final go/no-go after conditions close",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-27",
+      "status": "open"
+    },
+    {
+      "text": "Request Attachment C and formatting/page-limit requirements from buyer",
+      "owner": "Priya Raman",
+      "due_date": "2026-10-26",
+      "status": "open"
+    }
+  ],
+  "rationale": "The base bid is not viable: ISO 27001 is expired, only four of five references are available, the lead architect is unavailable for months 1-3, and the base score is 46/100. Helix Systems can cover the ISO, reference, and delivery-lead gaps, raising the score to 68/100, but the partner margin is 11% against a 15% policy minimum and the deadline conflict remains unresolved. The human pursuit lead therefore chose a conditional bid with partner, subject to written evidence, a VP Finance margin exception, and buyer deadline clarification.",
+  "uncertainty": "The deadline conflict is unresolved pending the buyer response. Helix evidence and the delivery-lead commitment are pending. The VP Finance margin exception is recorded but the written exception is not in supplied material. VP of Delivery sign-off and supplier diversity plan evidence remain open. Attachment C is required but not provided, and the RFP does not state a page limit or detailed formatting rules. The final go/no-go decision remains conditional.",
+  "human_approval_ref": "Mattermost room message from Priya Raman, 2026-10-24 18:45 (fictional).",
+  "fallback": "If any condition remains open at submission, the decision is No-bid.",
+  "base_gates": [
+    {
+      "id": "G1",
+      "text": "Mandatory requirements met or partner-covered with written evidence",
+      "status": "fail",
+      "evidence": "M1 ISO expired 2026-08-31; M2 four of five references (Capabilities §2-§3)."
+    },
+    {
+      "id": "G2",
+      "text": "Weighted qualification score at least 65/100",
+      "status": "fail",
+      "evidence": "Base score 46/100 against the 65 threshold."
+    },
+    {
+      "id": "G3",
+      "text": "Margin at least 15%, or VP Finance exception",
+      "status": "pass",
+      "evidence": "Base margin 18% (Capabilities §6)."
+    },
+    {
+      "id": "G4",
+      "text": "Key roles staffed at 50% or more for the first 90 days",
+      "status": "fail",
+      "evidence": "Lead architect unavailable January-March 2027; anticipated award January 2027 (Capabilities §4; RFP Document control)."
+    },
+    {
+      "id": "G5",
+      "text": "Deadline conflict clarified with the buyer",
+      "status": "pass_with_conditions",
+      "evidence": "Clarification submitted 2026-10-19; buyer response pending (RFP §5.1-§5.2)."
+    },
+    {
+      "id": "G6",
+      "text": "Human approval recorded",
+      "status": "pass_with_conditions",
+      "evidence": "Priya Raman records the human decision on 2026-10-24; VP of Delivery sign-off pending."
+    }
+  ],
+  "base_requirements": [
+    {
+      "id": "M1",
+      "text": "ISO 27001 certification at submission",
+      "status": "missing",
+      "evidence": "ISO 27001 expired August 2026; no current certificate."
+    },
+    {
+      "id": "M2",
+      "text": "Five comparable public-sector references",
+      "status": "missing",
+      "evidence": "Only four Meridian references; no partner cover in the base bid."
+    },
+    {
+      "id": "M3",
+      "text": "24/7 support with one-hour P1 response",
+      "status": "met",
+      "evidence": "In-house tier 1/2 support with engineering escalation and sample P1 SLA."
+    },
+    {
+      "id": "M4",
+      "text": "Demonstrated six-service delivery plan",
+      "status": "missing",
+      "evidence": "Lead architect unavailable January-March 2027; no base mitigation."
+    },
+    {
+      "id": "M5",
+      "text": "WCAG 2.2 AA compliance",
+      "status": "met",
+      "evidence": "Conformance reports, accessibility approach, and testing plan."
+    },
+    {
+      "id": "M6",
+      "text": "Data residency in Avalon or approved region",
+      "status": "met",
+      "evidence": "Avalon North region with architecture and attestation."
+    }
+  ],
+  "base_margin_percent": 18.0,
+  "base_scores": {
+    "technical": {
+      "weight": 40,
+      "score": 2.0,
+      "evidence": "Two comparable portal builds; ISO and capacity gaps."
+    },
+    "past_performance": {
+      "weight": 25,
+      "score": 3.0,
+      "evidence": "Four comparable public-sector references; five required."
+    },
+    "price": {
+      "weight": 20,
+      "score": 3.0,
+      "evidence": "Base bid $2.35M at 18% margin; market-competitive but not the strongest value case."
+    },
+    "supplier_diversity": {
+      "weight": 15,
+      "score": 1.0,
+      "evidence": "Small-business status only; no diversity plan."
+    }
+  }
+}
