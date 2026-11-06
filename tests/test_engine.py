@@ -116,6 +116,15 @@ class EngineTests(unittest.TestCase):
         errors = validate(data, policy)
         self.assertTrue(any("base_requirements" in error for error in errors))
 
+    def test_policy_version_mismatch_rejected(self):
+        policy = load_policy(SIMPLE_POLICY)
+        data = simple_decision()
+        data["policy_id"] = "another-policy"
+        data["policy_version"] = "9.9.9"
+        errors = validate(data, policy)
+        self.assertTrue(any("policy_id" in error for error in errors))
+        self.assertTrue(any("policy_version" in error for error in errors))
+
     def test_optional_gates_can_be_disabled(self):
         policy = load_policy(OPTIONAL_POLICY)
         self.assertIsNone(policy.score_gate)

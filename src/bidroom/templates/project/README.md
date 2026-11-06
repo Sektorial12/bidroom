@@ -7,7 +7,8 @@ This BidRoom project was created with `bidroom init`.
 - `manifest.json` — project metadata and source paths.
 - `policy.json` — machine-readable bid/no-bid policy.
 - `sources/` — the RFP, capability evidence, and other source material.
-- `rooms/` — room and agent prompts for the three-room Switch workflow.
+- `rooms/` — room prompts for the three-room Switch workflow.
+- `agents/` — analyst, critic, and auditor prompts.
 - `records/` — decision records and validation output.
 
 ## First steps

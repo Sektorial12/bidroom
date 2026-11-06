@@ -1,8 +1,11 @@
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
-from bidroom.scaffold import check_project, init_project
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from bidroom.scaffold import check_project, init_project  # noqa: E402
 
 
 class ScaffoldTests(unittest.TestCase):

@@ -146,8 +146,8 @@ python -m unittest discover -s tests -v
 python -m unittest discover -s tools/tests -v
 ```
 
-- `tests/` covers the generic engine, a second policy, scaffolding, and project checks.
-- `tools/tests/` is the Northstar conformance suite.
+- `tests/` covers the generic engine, a second policy, optional gates, scaffolding, and project checks — **11 tests**.
+- `tools/tests/` is the Northstar conformance suite — **49 tests**.
 
 ## Security and limits
 

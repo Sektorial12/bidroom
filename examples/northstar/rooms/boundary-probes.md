@@ -74,4 +74,4 @@ Expected: the critic says the analyst is not a member of this room and the human
 - [ ] The record-room analyst's policy refusal.
 - [ ] The critic's statement that the analyst is not a member.
 
-Paste the raw replies into `verification/test-runs/three-room-run.md`.
+Paste the raw replies into `examples/northstar/verification/test-runs/three-room-run.md`.

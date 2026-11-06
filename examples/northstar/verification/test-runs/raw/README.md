@@ -14,7 +14,7 @@ Files:
 - `user-map.json` — user IDs mapped to role labels (`human`, `bid-analyst`, `auditor-1`, etc.); **no emails or personal usernames**.
 - `transcript.md` — readable transcript with timestamps and post IDs.
 - `membership.md` — raw `!list-agents` and `!list-documents` replies.
-- `fresh-agent.md` — raw `room-auditor-2` reply.
+- `fresh-agent.md` — raw `room-auditor-2` second-agent reply; the first auditor's reply was still in the room, so a clean audit is pending.
 - `human-confirmation.md` — raw human record confirmation.
 - `boundary-probes.json` — raw probe posts and agent replies.
 - `boundary-probes.md` — readable boundary-probe transcript.

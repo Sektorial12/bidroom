@@ -77,7 +77,7 @@ class BidcheckTests(unittest.TestCase):
         result = run_fixture("valid_no_bid.json")
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("no_bid", result.stdout)
-        self.assertIn("46/100", result.stdout)
+        self.assertIn("50/100", result.stdout)
 
     def test_invalid_missing_evidence(self):
         result = run_fixture("invalid_missing_evidence.json")

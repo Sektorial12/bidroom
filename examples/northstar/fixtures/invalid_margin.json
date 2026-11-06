@@ -67,7 +67,7 @@
     }
   },
   "total_score": 68.0,
-  "base_total_score": 46.0,
+  "base_total_score": 50.0,
   "gates": [
     {
       "id": "G1",
@@ -226,7 +226,7 @@
       "status": "open"
     }
   ],
-  "rationale": "The base bid is not viable: ISO 27001 is expired, only four of five references are available, the lead architect is unavailable for months 1-3, and the base score is 46/100. Helix Systems can cover the ISO, reference, and delivery-lead gaps, raising the score to 68/100, but the partner margin is 11% against a 15% policy minimum and the deadline conflict remains unresolved. The human pursuit lead therefore chose a conditional bid with partner, subject to written evidence, a VP Finance margin exception, and buyer deadline clarification.",
+  "rationale": "The base bid is not viable: ISO 27001 is expired, only four of five references are available, the lead architect is unavailable for months 1-3, and the base score is 50/100. Helix Systems can cover the ISO, reference, and delivery-lead gaps, raising the score to 68/100, but the partner margin is 11% against a 15% policy minimum and the deadline conflict remains unresolved. The human pursuit lead therefore chose a conditional bid with partner, subject to written evidence, a VP Finance margin exception, and buyer deadline clarification.",
   "uncertainty": "The deadline conflict is unresolved pending the buyer response. Helix evidence and the delivery-lead commitment are pending. The VP Finance margin exception is recorded but the written exception is not in supplied material. VP of Delivery sign-off, engagement director allocation, and supplier diversity plan evidence remain open. Attachment C is required but not provided, and the RFP does not state a page limit or detailed formatting rules. The final go/no-go decision remains conditional. Buyer confirmation that Helix's ISO certificate and reference satisfy the bidder-level M1/M2 requirements is still required; partner coverage is not assumed to be accepted.",
   "human_approval_ref": "Mattermost room message from Priya Raman, 2026-10-24 (fictional).",
   "fallback": "If any condition remains open at submission, the decision is No-bid.",
@@ -241,7 +241,7 @@
       "id": "G2",
       "text": "Weighted qualification score at least 65/100",
       "status": "fail",
-      "evidence": "Base score 46/100 against the 65 threshold."
+      "evidence": "Base score 50/100 against the 65 threshold."
     },
     {
       "id": "G3",
@@ -320,8 +320,8 @@
     },
     "price": {
       "weight": 20,
-      "score": 3.0,
-      "evidence": "Base bid $2.35M at 18% margin; market-competitive but not the strongest value case."
+      "score": 4.0,
+      "evidence": "Base bid $2.35M at 18% margin; above target but not lowest cost."
     },
     "supplier_diversity": {
       "weight": 15,

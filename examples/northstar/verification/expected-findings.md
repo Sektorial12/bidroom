@@ -22,7 +22,7 @@ Use this file after every end-to-end run:
 
 **Scenario clock:** the fictional review date is **October 24, 2026**. The solicitation is still open. The deadline clarification was submitted on October 19; the buyer acknowledged receipt, response pending.
 
-**Final-run status:** the three-room run recorded base **50/100** and partner **68/100**. The corrected record was confirmed verbatim by the human; `room-auditor-2` passed it with documentation caveats. The record remains conditional.
+**Final-run status:** the three-room run recorded base **50/100** and partner **68/100**. The corrected record was confirmed verbatim by the human; the second agent passed it with documentation caveats, but the first auditor's reply was still in the room, so a clean independent audit is pending. The record remains conditional.
 
 **Base-status rule:** the initial requirement matrix describes **Meridian alone**. M1 and M2 must be `missing` in the base matrix; Helix mitigation belongs in the evidence/gap cell or in the later partner scenario. The analyst should not mark a base gap `partner-covered` before the human asks for a partner scenario.
 

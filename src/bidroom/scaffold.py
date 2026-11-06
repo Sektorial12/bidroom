@@ -115,20 +115,42 @@ def check_project(project: str | Path) -> list[str]:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         return [f"invalid manifest JSON: {exc}"]
+    if not isinstance(manifest, dict):
+        return ["manifest must be a JSON object"]
 
     errors: list[str] = []
-    policy_path = project_path / str(manifest.get("policy", ""))
-    try:
-        load_policy(policy_path)
-    except PolicyError as exc:
-        errors.append(str(exc))
+    if manifest.get("schema_version") != "1.0":
+        errors.append("manifest.schema_version must be '1.0'")
+    for field in ("project_id", "project_name", "decision_owner", "policy"):
+        if not isinstance(manifest.get(field), str) or not manifest[field].strip():
+            errors.append(f"manifest.{field} must be a non-empty string")
 
-    for group, paths in manifest.get("sources", {}).items():
-        for relative in paths:
-            if not (project_path / relative).exists():
-                errors.append(f"missing source for {group}: {relative}")
+    policy_name = manifest.get("policy")
+    if isinstance(policy_name, str) and policy_name.strip():
+        policy_path = project_path / policy_name
+        try:
+            load_policy(policy_path)
+        except PolicyError as exc:
+            errors.append(str(exc))
 
-    for room, room_name in manifest.get("rooms", {}).items():
-        if not room_name:
-            errors.append(f"missing room name for {room}")
+    sources = manifest.get("sources")
+    if not isinstance(sources, dict):
+        errors.append("manifest.sources must be an object")
+    else:
+        for group, paths in sources.items():
+            if not isinstance(paths, list) or not all(isinstance(item, str) for item in paths):
+                errors.append(f"manifest.sources.{group} must be a list of paths")
+                continue
+            for relative in paths:
+                if not (project_path / relative).exists():
+                    errors.append(f"missing source for {group}: {relative}")
+
+    rooms = manifest.get("rooms")
+    if not isinstance(rooms, dict):
+        errors.append("manifest.rooms must be an object")
+    else:
+        for room in ("intake", "review", "record"):
+            room_name = rooms.get(room)
+            if not isinstance(room_name, str) or not room_name.strip():
+                errors.append(f"manifest.rooms.{room} must be a non-empty string")
     return errors

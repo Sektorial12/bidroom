@@ -327,6 +327,16 @@ def validate(data: Any, policy: Policy) -> list[str]:
     if _is_placeholder(human_owner) or _looks_like_agent(human_owner):
         errors.append("human_owner must name a human decision owner, not an agent or placeholder.")
 
+    if data.get("policy_id") and data["policy_id"] != policy.policy_id:
+        errors.append(
+            f"policy_id {data['policy_id']!r} does not match policy {policy.policy_id!r}."
+        )
+    if data.get("policy_version") and data["policy_version"] != policy.policy_version:
+        errors.append(
+            f"policy_version {data['policy_version']!r} does not match policy "
+            f"{policy.policy_version!r}."
+        )
+
     decision = data.get("decision")
     if decision not in policy.decision_options:
         errors.append(

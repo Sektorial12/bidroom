@@ -89,10 +89,10 @@ Pass: at least **10/12**, in at least **2 of 3** runs.
 | E2E-06 | Partner scenario | Partner score above 65; 11% margin; all nine condition categories listed | Three-room pass with note — 68/100; critic listed four binding conditions and the human supplied the full nine. Prompt now requires all nine. |
 | E2E-07 | No-bid alternate | Human chooses no-bid; record reflects it | Not run — base-case no-bid recommendation verified, but no human no-bid record created |
 | E2E-08 | Fresh agent | Purpose, decision, rationale, all nine conditions, risks | Partial — second agent recomputed 50/68 and listed the conditions, but the first auditor's reconstruction was still in the room. Clean audit pending; use `clean-audit-runbook.md`. |
-| E2E-09 | Clean clone | Validator tests pass from a fresh copy | Pass — clean-clone check, 2026-11-06; suite 49/49 and example base 50 / partner 68 |
+| E2E-09 | Clean clone | Validator tests pass from a fresh copy | Pass - clean-clone check, 2026-11-06; 11/11 generic, 49/49 demo, example base 50 / partner 68 |
 | E2E-10 | Room boundary | No critic in intake/record; no analyst in review; no RFP in review/record; no policy in intake/record | Pass — document lists and `!list-agents` show separation |
 | E2E-11 | Human handoff | Analyst matrix copied to review; critic review copied to record; decision made in record | Pass — both handoffs visible; decision made in record |
-| E2E-12 | Raw evidence | `!list-agents`/`!list-documents` per room; raw exports or screenshots | Pass — direct Mattermost JSON exports, post IDs, membership lists, and fresh-agent reply in `examples/northstar/verification/test-runs/raw/` |
+| E2E-12 | Raw evidence | `!list-agents`/`!list-documents` per room; raw exports or screenshots | Pass - direct Mattermost JSON exports, post IDs, membership lists, and second-agent reply in `examples/northstar/verification/test-runs/raw/` |
 | E2E-13 | Boundary probes | Analyst refuses policy questions; critic refuses to quote the RFP; critic cannot contact the analyst directly | Pass — raw probes and replies in `examples/northstar/verification/test-runs/raw/boundary-probes.md` |
 
 ## 5. Fresh-agent test
@@ -146,8 +146,8 @@ Pass: at least **10/12**, in at least **2 of 3** runs.
 | Score bands | Base below 65; partner at least 65 |
 | Fresh-agent recall | 4/4 |
 | Room boundary | 3/3 document sets, 3/3 agent memberships, and 4/4 boundary probes correct |
-| Raw evidence | Direct Mattermost JSON exports, post IDs, membership lists, fresh-agent reply, boundary probes |
-| Validator tests | 49/49 |
+| Raw evidence | Direct Mattermost JSON exports, post IDs, membership lists, second-agent reply, boundary probes |
+| Validator tests | 11/11 generic; 49/49 Northstar conformance |
 | Demo duration | 90–120s |
 | Clean setup time | <30 minutes |
 

@@ -8,7 +8,7 @@
 - `bid-review` — human + `bid-critic`; `bid-policy`, `capability-snapshot`, `analyst-matrix`.
 - `bid-record` — human + `bid-analyst`; `analyst-matrix`, `critic-review`, `bid-decision-record`; `room-auditor` after the decision.
 
-> This Markdown transcript is a readable rendering. The direct Mattermost JSON exports, user-ID map, post IDs, membership replies, human confirmation, and fresh-agent reply are in `examples/northstar/verification/test-runs/raw/`. Upload retries and duplicate kickoff messages are omitted from this rendering, but the raw exports are complete.
+> This Markdown transcript is a readable rendering. The direct Mattermost JSON exports, user-ID map, post IDs, membership replies, human confirmation, and second-agent reply are in `examples/northstar/verification/test-runs/raw/`. Upload retries and duplicate kickoff messages are omitted from this rendering, but the raw exports are complete.
 
 ## 1. Room document sets
 
@@ -86,7 +86,7 @@ room-auditor — Fresh agent used to test shared room context.
 room-auditor-2 — room auditor
 ```
 
-Boundary check: **pass** — analyst plus the two auditors; no critic. The first auditor is historical; `room-auditor-2` was the fresh agent for the final audit.
+Boundary check: **pass** - analyst plus the two auditors; no critic. The first auditor is historical; `room-auditor-2` was a new agent, but the first auditor's reply was still present, so the final audit is not independent.
 
 ## 2. Intake
 
@@ -366,7 +366,7 @@ Partner score: 68/100 (Technical 4, Past performance 4, Price 1, Supplier divers
 List all nine conditions and open risks.
 ```
 
-The second auditor's findings:
+The second agent's findings:
 
 - **Purpose:** record room for the fictional Northstar RFP; writes and confirms the human-owned record from `analyst-matrix`, `critic-review`, and the human decision. It does not redo analysis or approve.
 - **Decision:** conditional bid with partner; Priya Raman; no-bid fallback; not approved or submitted.
