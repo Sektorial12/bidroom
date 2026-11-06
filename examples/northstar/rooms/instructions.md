@@ -61,4 +61,4 @@ Paste the room-specific instructions into each room before adding agents:
 - `room/instructions-review.md`
 - `room/instructions-record.md`
 
-The full setup is in `docs/setup.md`.
+The full setup is in `examples/northstar/docs/setup.md`.

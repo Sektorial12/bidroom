@@ -120,7 +120,7 @@ Pass: at least **10/12**, in at least **2 of 3** runs.
 - Copy the repository to a temporary directory.
 - Run `python -m unittest discover -s tools/tests -v`.
 - Run `python tools/bidcheck.py examples/northstar/verification/decision.example.json`.
-- Follow `docs/setup.md` from a clean Switch state.
+- Follow `examples/northstar/docs/setup.md` from a clean Switch state.
 - Confirm the three rooms can be recreated with the same documents and memberships.
 - Confirm the boundary: no `bid-critic` in `bid-intake` or `bid-record`; no `bid-analyst` in `bid-review`; no RFP in review/record; no policy in intake/record.
 - Record Switch Console, core, Mattermost, Claude Code, Python, and model versions.

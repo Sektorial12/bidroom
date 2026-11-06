@@ -36,4 +36,4 @@ Both values applied to the analyst, critic, and fresh-agent auditor in the clean
 
 ## Reproducibility note
 
-The validator, sample data, and record format are reproducible from a clean clone. The Switch room depends on the manual setup in `docs/setup.md` and the live versions above.
+The validator, sample data, and record format are reproducible from a clean clone. The Switch room depends on the manual setup in `examples/northstar/docs/setup.md` and the live versions above.

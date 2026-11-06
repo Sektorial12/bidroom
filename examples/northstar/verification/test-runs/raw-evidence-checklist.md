@@ -8,7 +8,7 @@ Use this checklist during the final demo run. The goal is to replace the cleaned
 - [ ] Capture `!list-documents` in each room and confirm only the intended documents are present.
 - [ ] Confirm `examples/northstar/verification/expected-findings.md` is **not** attached to any room.
 - [ ] Confirm the analyst and critic are not members of each other's source room.
-- [ ] Note the Switch Console, core, Mattermost, Claude Code, model, and effort versions in `docs/environment.md`.
+- [ ] Note the Switch Console, core, Mattermost, Claude Code, model, and effort versions in `examples/northstar/docs/environment.md`.
 
 ## During the run
 

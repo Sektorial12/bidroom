@@ -99,7 +99,7 @@ In each agent's **Advanced configuration**, set:
 - Model: `deepseek-v4.1-flash`
 - Reasoning effort: `high`
 
-These are the values recorded in `docs/environment.md`. Claude Code is the agent provider; the model is selected in Advanced configuration. If your Console exposes a different model list, choose the equivalent and update `docs/environment.md` before recording.
+These are the values recorded in `examples/northstar/docs/environment.md`. Claude Code is the agent provider; the model is selected in Advanced configuration. If your Console exposes a different model list, choose the equivalent and update `examples/northstar/docs/environment.md` before recording.
 
 ## 6. Add agents to rooms
 
@@ -121,7 +121,7 @@ Do **not** add both source agents to the same room. That would break the source 
 
 ## 7. Create the authoritative documents
 
-The browser dashboard is called the **Gateway** in the documentation. On a Switch Console-managed native local server in 0.40.1, the “Full admin interface” card is hidden. Use the room-document path in `docs/room-doc-fallback.md` instead.
+The browser dashboard is called the **Gateway** in the documentation. On a Switch Console-managed native local server in 0.40.1, the “Full admin interface” card is hidden. Use the room-document path in `examples/northstar/docs/room-doc-fallback.md` instead.
 
 ### `bid-intake`
 
@@ -250,4 +250,4 @@ Record these versions in any test report:
 - Python version.
 - Exact model or effort setting used by the agents.
 
-The repository records the current values in `docs/environment.md`. Verify them before the final recording.
+The repository records the current values in `examples/northstar/docs/environment.md`. Verify them before the final recording.

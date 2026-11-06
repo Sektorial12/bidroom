@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Validate a BidRoom decision record and emit a markdown decision memo.
+"""Legacy Northstar conformance adapter.
 
-Standard library only. See docs/test-plan.md and verification/expected-findings.md.
+The generic, policy-driven engine is in ``src/bidroom``. This adapter keeps the
+original `python tools/bidcheck.py <decision.json>` command working for the
+Northstar example and its 49 conformance tests.
 """
 
 from __future__ import annotations

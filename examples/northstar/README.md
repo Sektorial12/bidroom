@@ -4,10 +4,13 @@ This directory is the frozen Northstar demo. It is a reference implementation of
 
 ## What is here
 
+- `manifest.json` — the project manifest used by `bidroom check`.
+- `policy.json` — the machine-readable Meridian policy used by the generic engine.
 - `sources/` — the fictional RFP, capability snapshot, and bid policy.
 - `rooms/` — Switch room instructions, agent prompts, handoff messages, and boundary probes.
 - `verification/` — the expected-findings oracle, example record, live record exports, transcripts, raw Mattermost evidence, and test-run runbooks.
 - `fixtures/` — the validator's valid and adversarial decision fixtures.
+- `docs/` — the demo-specific setup, test plan, fallback, environment, and architecture notes.
 
 ## Demo quickstart
 
@@ -22,7 +25,7 @@ Expected:
 VALID: Northstar Citizen Services Portal | bid_with_partner | 68/100
 ```
 
-The three-room Switch setup is in `docs/setup.md`. The exact live evidence is in `verification/test-runs/`.
+The three-room Switch setup is in `examples/northstar/docs/setup.md`. The exact live evidence is in `examples/northstar/verification/test-runs/`.
 
 ## Recorded result
 

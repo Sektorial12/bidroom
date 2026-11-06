@@ -21,4 +21,4 @@ OK
 VALID: Northstar Citizen Services Portal | bid_with_partner | 68/100
 ```
 
-The validator and example are reproducible from a clean clone of the public repository. The example matches the final three-room run scores: base **50/100**, partner **68/100**. The single-room prototype used base 46/100 and is kept as historical evidence. The three-room Switch workflow still requires the manual setup in `docs/setup.md`; it is not recreated by the clone.
+The validator and example are reproducible from a clean clone of the public repository. The example matches the final three-room run scores: base **50/100**, partner **68/100**. The single-room prototype used base 46/100 and is kept as historical evidence. The three-room Switch workflow still requires the manual setup in `examples/northstar/docs/setup.md`; it is not recreated by the clone.
