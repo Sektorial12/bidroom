@@ -122,7 +122,7 @@
       "status": "open"
     }
   ],
-  "rationale": "The base bid fails G1 on ISO and references, G2 with a score of 46, and G4 on capacity. No partner mitigation was approved, so the human pursuit lead chose no-bid.",
+  "rationale": "The base bid fails G1 on ISO and references, G2 with a score of 50, and G4 on capacity. No partner mitigation was approved, so the human pursuit lead chose no-bid.",
   "uncertainty": "Deadline conflict unresolved; no partner evidence collected.",
   "human_approval_ref": "Mattermost room message from Priya Raman, 2026-10-24 18:45 (fictional).",
   "base_gates": [

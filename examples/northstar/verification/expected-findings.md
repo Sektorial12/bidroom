@@ -225,7 +225,7 @@ Use this file after every end-to-end run:
 The Bid Critic should recommend **no-bid** for the base case because:
 
 - G1 fails on ISO 27001 and the reference count.
-- G2 fails with a score of 46.
+- G2 fails with a score of 50/100.
 - G4 fails on key-role capacity.
 - G5 remains conditional until the buyer responds to the deadline clarification.
 
