@@ -558,7 +558,8 @@ def validate(data: Any, policy: Policy) -> list[str]:
     if not _is_number(margin):
         errors.append("margin_percent must be a number.")
     if (
-        _is_number(margin)
+        policy.margin_gate is not None
+        and _is_number(margin)
         and _is_number(policy_min)
         and decision in policy.bid_decisions
         and float(margin) < float(policy_min)

@@ -5,6 +5,7 @@
 - Added policy-driven decision engine in `src/bidroom`.
 - Added generic policy and decision schemas.
 - Added `bidroom init`, `validate`, `render`, and `check`.
+- Added optional gate rules; margin, score, capacity, and human-approval gates can be disabled per policy.
 - Added generic room and agent templates.
 - Preserved the Northstar demo under `examples/northstar`.
 - Added generic engine tests and retained the Northstar conformance suite.

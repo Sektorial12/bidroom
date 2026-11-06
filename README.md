@@ -89,7 +89,7 @@ A policy is data:
 }
 ```
 
-The engine does not contain Northstar IDs, weights, thresholds, or condition names. A second policy test under `tests/` uses different gates and criteria to prove that.
+The engine does not contain Northstar IDs, weights, thresholds, or condition names. A second policy test under `tests/` uses different gates and criteria to prove that. Optional gates — such as margin or capacity — can be disabled by setting their gate rule to `null`.
 
 Read more:
 

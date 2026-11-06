@@ -55,12 +55,12 @@ class Policy:
     min_score: float
     score_formula: str
     gates: tuple[Gate, ...]
-    requirements_gate: str
-    score_gate: str
-    margin_gate: str
-    capacity_gate: str
-    capacity_requirement: str
-    human_approval_gate: str
+    requirements_gate: str | None
+    score_gate: str | None
+    margin_gate: str | None
+    capacity_gate: str | None
+    capacity_requirement: str | None
+    human_approval_gate: str | None
     min_margin: float
     gate_exception_role: str
     margin_exception_role: str
@@ -114,6 +114,7 @@ def policy_from_dict(data: dict[str, Any]) -> Policy:
     scoring = _require(data, "scoring", dict, "policy")
     gates_data = _require(data, "gates", list, "policy")
     gate_rules = _require(data, "gate_rules", dict, "policy")
+
     thresholds = _require(data, "thresholds", dict, "policy")
     conditions = _require(data, "conditions", dict, "policy")
     data_note = _require(data, "data_note", dict, "policy")
@@ -167,21 +168,37 @@ def policy_from_dict(data: dict[str, Any]) -> Policy:
     _unique(list(requirement_ids), "requirements.ids")
 
     gate_ids = {gate.id for gate in gates}
-    for rule in (
-        "requirements_gate",
-        "score_gate",
-        "margin_gate",
-        "capacity_gate",
-        "human_approval_gate",
-    ):
-        gate_id = str(_require(gate_rules, rule, str, "gate_rules"))
-        if gate_id not in gate_ids:
-            raise PolicyError(f"gate_rules.{rule} references unknown gate: {gate_id}")
-    capacity_requirement = str(_require(gate_rules, "capacity_requirement", str, "gate_rules"))
-    if capacity_requirement not in requirement_ids:
-        raise PolicyError(
-            f"gate_rules.capacity_requirement references unknown requirement: {capacity_requirement}"
-        )
+
+    def optional_gate(rule: str) -> str | None:
+        value = gate_rules.get(rule)
+        if value is None:
+            return None
+        if not isinstance(value, str):
+            raise PolicyError(f"gate_rules.{rule} must be a string or null")
+        if value not in gate_ids:
+            raise PolicyError(f"gate_rules.{rule} references unknown gate: {value}")
+        return value
+
+    requirements_gate = optional_gate("requirements_gate")
+    score_gate = optional_gate("score_gate")
+    margin_gate = optional_gate("margin_gate")
+    capacity_gate = optional_gate("capacity_gate")
+    human_approval_gate = optional_gate("human_approval_gate")
+
+    capacity_requirement_value = gate_rules.get("capacity_requirement")
+    if capacity_requirement_value is not None:
+        if not isinstance(capacity_requirement_value, str):
+            raise PolicyError("gate_rules.capacity_requirement must be a string or null")
+        if capacity_requirement_value not in requirement_ids:
+            raise PolicyError(
+                "gate_rules.capacity_requirement references unknown requirement: "
+                f"{capacity_requirement_value}"
+            )
+    capacity_requirement = capacity_requirement_value
+    if capacity_gate is not None and capacity_requirement is None:
+        raise PolicyError("gate_rules.capacity_gate requires capacity_requirement")
+    if capacity_gate is None and capacity_requirement is not None:
+        raise PolicyError("gate_rules.capacity_requirement requires capacity_gate")
 
     return Policy(
         policy_id=str(_require(data, "policy_id", str, "policy")),
@@ -207,12 +224,12 @@ def policy_from_dict(data: dict[str, Any]) -> Policy:
         min_score=float(_require(scoring, "minimum_score", (int, float), "scoring")),
         score_formula=str(scoring.get("formula", "weighted_sum_div_5")),
         gates=gates,
-        requirements_gate=str(gate_rules["requirements_gate"]),
-        score_gate=str(gate_rules["score_gate"]),
-        margin_gate=str(gate_rules["margin_gate"]),
-        capacity_gate=str(gate_rules["capacity_gate"]),
+        requirements_gate=requirements_gate,
+        score_gate=score_gate,
+        margin_gate=margin_gate,
+        capacity_gate=capacity_gate,
         capacity_requirement=capacity_requirement,
-        human_approval_gate=str(gate_rules["human_approval_gate"]),
+        human_approval_gate=human_approval_gate,
         min_margin=float(
             _require(thresholds, "minimum_margin_percent", (int, float), "thresholds")
         ),

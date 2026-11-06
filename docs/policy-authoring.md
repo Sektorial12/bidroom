@@ -73,6 +73,29 @@ A BidRoom policy is a JSON document that tells the engine how to evaluate a deci
 | `human_approval` | The gate cannot be `fail` when `human_signoff` is true. |
 | `manual` | No automatic rule beyond the gate structure and exception handling. |
 
+## Optional gates
+
+A policy does not have to use every gate type. Set a gate rule to `null` or omit it:
+
+```json
+"gate_rules": {
+  "requirements_gate": "G1",
+  "score_gate": null,
+  "margin_gate": null,
+  "capacity_gate": null,
+  "capacity_requirement": null,
+  "human_approval_gate": "G4"
+}
+```
+
+Rules:
+
+- `margin_gate: null` disables the margin-exception requirement and the margin gate consistency check.
+- `score_gate: null` disables the gate-alignment check, but the policy's `scoring.minimum_score` still applies to bid decisions.
+- `capacity_gate` and `capacity_requirement` must both be set or both be `null`.
+- Any gate defined in `gates` must still appear in the decision record's gate table; the engine validates its structure and evidence.
+- A gate with no automatic rule is effectively a manual gate. The human and critic still fill it in.
+
 ## Scoring
 
 `weighted_sum_div_5` is:

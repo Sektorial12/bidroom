@@ -7,11 +7,12 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from bidroom.engine import render_markdown, validate  # noqa: E402
-from bidroom.policy import load_policy  # noqa: E402
+from bidroom.policy import PolicyError, load_policy, policy_from_dict  # noqa: E402
 
 NORTHSTAR_POLICY = ROOT / "examples" / "northstar" / "policy.json"
 NORTHSTAR_DECISION = ROOT / "examples" / "northstar" / "verification" / "decision.example.json"
 SIMPLE_POLICY = Path(__file__).resolve().parent / "fixtures" / "policy_simple.json"
+OPTIONAL_POLICY = Path(__file__).resolve().parent / "fixtures" / "policy_optional_gates.json"
 
 
 def simple_decision() -> dict:
@@ -114,6 +115,32 @@ class EngineTests(unittest.TestCase):
         data["base_requirements"][0]["status"] = "partner_covered"
         errors = validate(data, policy)
         self.assertTrue(any("base_requirements" in error for error in errors))
+
+    def test_optional_gates_can_be_disabled(self):
+        policy = load_policy(OPTIONAL_POLICY)
+        self.assertIsNone(policy.score_gate)
+        self.assertIsNone(policy.margin_gate)
+        self.assertIsNone(policy.capacity_gate)
+
+        data = simple_decision()
+        data["gates"] = [
+            {"id": "MANDATORY", "text": "Mandatory evidence", "status": "pass", "evidence": "Met."},
+            {"id": "APPROVAL", "text": "Human approval", "status": "pass", "evidence": "Recorded."},
+        ]
+        data["base_gates"] = [
+            {"id": "MANDATORY", "text": "Mandatory evidence", "status": "pass", "evidence": "Met."},
+            {"id": "APPROVAL", "text": "Human approval", "status": "pass", "evidence": "Recorded."},
+        ]
+        data["margin_percent"] = 5.0
+        data["base_margin_percent"] = 5.0
+        self.assertEqual(validate(data, policy), [])
+
+    def test_capacity_gate_requires_capacity_requirement(self):
+        policy_data = json.loads(OPTIONAL_POLICY.read_text(encoding="utf-8"))
+        policy_data["gate_rules"]["capacity_gate"] = "MANDATORY"
+        policy_data["gate_rules"]["capacity_requirement"] = None
+        with self.assertRaises(PolicyError):
+            policy_from_dict(policy_data)
 
 
 if __name__ == "__main__":

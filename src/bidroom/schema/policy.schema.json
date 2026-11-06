@@ -87,14 +87,13 @@
     "gate_rules": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["requirements_gate", "score_gate", "margin_gate", "capacity_gate", "capacity_requirement", "human_approval_gate"],
       "properties": {
-        "requirements_gate": { "type": "string" },
-        "score_gate": { "type": "string" },
-        "margin_gate": { "type": "string" },
-        "capacity_gate": { "type": "string" },
-        "capacity_requirement": { "type": "string" },
-        "human_approval_gate": { "type": "string" }
+        "requirements_gate": { "type": ["string", "null"] },
+        "score_gate": { "type": ["string", "null"] },
+        "margin_gate": { "type": ["string", "null"] },
+        "capacity_gate": { "type": ["string", "null"] },
+        "capacity_requirement": { "type": ["string", "null"] },
+        "human_approval_gate": { "type": ["string", "null"] }
       }
     },
     "thresholds": {
