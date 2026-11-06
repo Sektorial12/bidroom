@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "project_id": "northstar",
+  "project_name": "Northstar Citizen Services Portal",
+  "decision_owner": "Priya Raman, Bid Director",
+  "policy": "policy.json",
+  "rooms": {
+    "intake": "bid-intake",
+    "review": "bid-review",
+    "record": "bid-record"
+  },
+  "sources": {
+    "intake": ["sources/rfp-northstar.md", "sources/capabilities.md"],
+    "review": ["sources/bid-policy.md", "sources/capabilities.md"],
+    "record": ["verification/decision-record.three-room.md"]
+  }
+}
