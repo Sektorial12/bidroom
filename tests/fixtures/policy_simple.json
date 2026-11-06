@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "simple-test-policy",
+  "policy_version": "1.0.0",
+  "description": "A second policy with different gates, criteria, and thresholds.",
+  "decision": {
+    "options": ["bid", "no_bid"],
+    "bid_options": ["bid"],
+    "no_bid": "no_bid",
+    "fallback_required_for": []
+  },
+  "requirements": {
+    "ids": ["R1"],
+    "statuses": ["met", "missing", "conflicting", "partner_covered", "not_assessed"],
+    "base_partner_status": "partner_covered",
+    "blocking_statuses": ["missing", "conflicting", "not_assessed"]
+  },
+  "scoring": {
+    "formula": "weighted_sum_div_5",
+    "minimum_score": 70,
+    "criteria": [
+      { "id": "fit", "label": "Fit", "weight": 60 },
+      { "id": "price", "label": "Price", "weight": 40 }
+    ]
+  },
+  "gates": [
+    { "id": "MANDATORY", "text": "Mandatory evidence", "type": "requirements" },
+    { "id": "SCORE", "text": "Minimum fit score", "type": "score_threshold" },
+    { "id": "MARGIN", "text": "Minimum margin", "type": "margin_threshold" },
+    { "id": "APPROVAL", "text": "Human approval", "type": "human_approval" }
+  ],
+  "gate_rules": {
+    "requirements_gate": "MANDATORY",
+    "score_gate": "SCORE",
+    "margin_gate": "MARGIN",
+    "capacity_gate": "MANDATORY",
+    "capacity_requirement": "R1",
+    "human_approval_gate": "APPROVAL"
+  },
+  "thresholds": {
+    "minimum_margin_percent": 20,
+    "gate_exception_role": "Pursuit Lead + Accountable Executive",
+    "margin_exception_role": "VP of Finance"
+  },
+  "conditions": {
+    "minimum_count": 0,
+    "categories": [
+      {
+        "id": "approval",
+        "label": "Approval",
+        "keywords": [["approval"]]
+      }
+    ]
+  },
+  "data_note": {
+    "required_any": ["fictional", "synthetic"],
+    "forbidden_any": ["real client", "real data", "confidential data"]
+  }
+}
