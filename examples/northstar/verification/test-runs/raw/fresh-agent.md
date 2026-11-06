@@ -1,6 +1,6 @@
 # Second-agent reply
 
-> The first auditor's reconstruction was still in this room. This is a new-agent reply, but not an independent clean-room audit. See `verification/test-runs/clean-audit-runbook.md`.
+> The first auditor's reconstruction was still in this room. This is a new-agent reply, but not an independent clean-room audit. See `examples/northstar/verification/test-runs/clean-audit-runbook.md`.
 
 **Post:** `wr1rytqxp3ngjx3ew47nmbzwwr`  
 **Channel:** `bid-record-clean`  

@@ -92,8 +92,8 @@ Pass: at least **10/12**, in at least **2 of 3** runs.
 | E2E-09 | Clean clone | Validator tests pass from a fresh copy | Pass — clean-clone check, 2026-11-06; suite 49/49 and example base 50 / partner 68 |
 | E2E-10 | Room boundary | No critic in intake/record; no analyst in review; no RFP in review/record; no policy in intake/record | Pass — document lists and `!list-agents` show separation |
 | E2E-11 | Human handoff | Analyst matrix copied to review; critic review copied to record; decision made in record | Pass — both handoffs visible; decision made in record |
-| E2E-12 | Raw evidence | `!list-agents`/`!list-documents` per room; raw exports or screenshots | Pass — direct Mattermost JSON exports, post IDs, membership lists, and fresh-agent reply in `verification/test-runs/raw/` |
-| E2E-13 | Boundary probes | Analyst refuses policy questions; critic refuses to quote the RFP; critic cannot contact the analyst directly | Pass — raw probes and replies in `verification/test-runs/raw/boundary-probes.md` |
+| E2E-12 | Raw evidence | `!list-agents`/`!list-documents` per room; raw exports or screenshots | Pass — direct Mattermost JSON exports, post IDs, membership lists, and fresh-agent reply in `examples/northstar/verification/test-runs/raw/` |
+| E2E-13 | Boundary probes | Analyst refuses policy questions; critic refuses to quote the RFP; critic cannot contact the analyst directly | Pass — raw probes and replies in `examples/northstar/verification/test-runs/raw/boundary-probes.md` |
 
 ## 5. Fresh-agent test
 
@@ -119,7 +119,7 @@ Pass: at least **10/12**, in at least **2 of 3** runs.
 
 - Copy the repository to a temporary directory.
 - Run `python -m unittest discover -s tools/tests -v`.
-- Run `python tools/bidcheck.py verification/decision.example.json`.
+- Run `python tools/bidcheck.py examples/northstar/verification/decision.example.json`.
 - Follow `docs/setup.md` from a clean Switch state.
 - Confirm the three rooms can be recreated with the same documents and memberships.
 - Confirm the boundary: no `bid-critic` in `bid-intake` or `bid-record`; no `bid-analyst` in `bid-review`; no RFP in review/record; no policy in intake/record.
@@ -171,4 +171,4 @@ Treat any of the following as a release blocker:
 - The human handoff is skipped, or the analyst invents the critic review instead of copying it.
 - A record with unresolved auditor discrepancies is treated as final or approved.
 
-Full oracle: `verification/expected-findings.md`.
+Full oracle: `examples/northstar/verification/expected-findings.md`.

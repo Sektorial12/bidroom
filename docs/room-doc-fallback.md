@@ -17,15 +17,15 @@ The room remains the authoritative source of context. The difference is that doc
 | `bid-record` | `critic-review` | `bid-analyst` from the full critic output (base review + partner review) | `rfp-northstar`, `bid-policy` |
 | `bid-record` | `bid-decision-record` | `bid-analyst` from the human decision | `rfp-northstar`, `bid-policy` |
 
-Do not attach `kickoff-message.md`, `handoff-review.md`, `handoff-record.md`, or `verification/expected-findings.md` as documents. Post the handoff files as chat messages. The oracle is never room content.
+Do not attach `kickoff-message.md`, `handoff-review.md`, `handoff-record.md`, or `examples/northstar/verification/expected-findings.md` as documents. Post the handoff files as chat messages. The oracle is never room content.
 
 ## 1. Create or open the rooms
 
 Create `bid-intake`, `bid-review`, and `bid-record` in Switch Console. Before adding agents, paste the room-specific instructions:
 
-- `bid-intake` → `room/instructions-intake.md`
-- `bid-review` → `room/instructions-review.md`
-- `bid-record` → `room/instructions-record.md`
+- `bid-intake` → `examples/northstar/rooms/instructions-intake.md`
+- `bid-review` → `examples/northstar/rooms/instructions-review.md`
+- `bid-record` → `examples/northstar/rooms/instructions-record.md`
 
 If the instructions change later, remove and re-add the agents so they read the new text.
 
@@ -114,7 +114,7 @@ create or update the room document "bid-decision-record" using `critic-review` f
 gate tables and scores.
 ```
 
-The full record prompt is in `room/handoff-record.md`.
+The full record prompt is in `examples/northstar/rooms/handoff-record.md`.
 
 ## 8. Verify each room
 
@@ -136,4 +136,4 @@ If a room contains a document from the other source boundary, stop and remove it
 - Only the agent that created a room document can edit it. Use `bid-analyst` for the intake documents and `bid-record` documents; use `bid-critic` for the review documents.
 - Do not attach the oracle; it is the test answer key, not room evidence.
 - If a document name already exists, ask the agent to update the existing document instead of creating a duplicate.
-- Confirm each agent runs in an empty local directory outside the repository. It should not be able to read `sample-data/` or `verification/` from disk.
+- Confirm each agent runs in an empty local directory outside the repository. It should not be able to read `examples/northstar/sources/` or `examples/northstar/verification/` from disk.

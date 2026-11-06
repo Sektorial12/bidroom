@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CLI = ROOT / "tools" / "bidcheck.py"
-FIXTURES = Path(__file__).resolve().parent / "fixtures"
+FIXTURES = ROOT / "examples" / "northstar" / "fixtures"
 
 
 def run_fixture(name: str, md_path: Path | None = None) -> subprocess.CompletedProcess:

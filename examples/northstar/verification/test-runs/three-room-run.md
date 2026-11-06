@@ -8,7 +8,7 @@
 - `bid-review` — human + `bid-critic`; `bid-policy`, `capability-snapshot`, `analyst-matrix`.
 - `bid-record` — human + `bid-analyst`; `analyst-matrix`, `critic-review`, `bid-decision-record`; `room-auditor` after the decision.
 
-> This Markdown transcript is a readable rendering. The direct Mattermost JSON exports, user-ID map, post IDs, membership replies, human confirmation, and fresh-agent reply are in `verification/test-runs/raw/`. Upload retries and duplicate kickoff messages are omitted from this rendering, but the raw exports are complete.
+> This Markdown transcript is a readable rendering. The direct Mattermost JSON exports, user-ID map, post IDs, membership replies, human confirmation, and fresh-agent reply are in `examples/northstar/verification/test-runs/raw/`. Upload retries and duplicate kickoff messages are omitted from this rendering, but the raw exports are complete.
 
 ## 1. Room document sets
 
@@ -274,7 +274,7 @@ Decision: Bid with partner. Human owner: Priya Raman. Fallback: if any condition
 open at submission, No-bid.
 ```
 
-The analyst first created the record, then applied the resolution prompt from `room/record-resolutions.md`:
+The analyst first created the record, then applied the resolution prompt from `examples/northstar/rooms/record-resolutions.md`:
 
 ```text
 @bid-analyst Update bid-decision-record to resolve the auditor findings, using
@@ -388,7 +388,7 @@ The second auditor's findings:
 
 ## 5.1 Boundary probes
 
-Run live after the audit. Raw posts and replies are in `verification/test-runs/raw/boundary-probes.json` and `boundary-probes.md`.
+Run live after the audit. Raw posts and replies are in `examples/northstar/verification/test-runs/raw/boundary-probes.json` and `boundary-probes.md`.
 
 | Probe | Room | Result |
 |---|---|---|
@@ -409,14 +409,14 @@ Run live after the audit. Raw posts and replies are in `verification/test-runs/r
 
 **Record result:** corrected, confirmed verbatim by the human, and audited by a second agent. The second audit passed with documentation caveats; the record is conditional, not approved or submitted. A clean independent audit is still pending because the first auditor's reply remained in the room.
 
-**Evidence:** the direct Mattermost JSON exports and post IDs are in `verification/test-runs/raw/`.
+**Evidence:** the direct Mattermost JSON exports and post IDs are in `examples/northstar/verification/test-runs/raw/`.
 
 **Remaining evidence gap:** the demo video.
 
 ## 7. Next actions
 
 1. Decide whether to fix the G5 wording and G6 label caveats in the room record. The canonical repo record now uses base G6 `fail`, partner G2 `pass`, and condition 6 `done`; the room record still needs a matching update if you want it to match exactly.
-2. Update the live critic agent instructions in Switch Console from `room/agent-bid-critic.md`; the live run still had the pre-update prompt and did not produce the nine named categories.
+2. Update the live critic agent instructions in Switch Console from `examples/northstar/rooms/agent-bid-critic.md`; the live run still had the pre-update prompt and did not produce the nine named categories.
 3. Keep the `critic-review` description honest: it was copied verbatim and then the base score table was added by the analyst.
 4. Run the clean audit in `clean-audit-runbook.md` and capture the exact record with `exact-record-export.md`.
 5. Record the 90–120 second demo.

@@ -12,12 +12,12 @@ Post in `bid-record-clean`, addressed to `@bid-analyst`:
 
 ## Capture
 
-- Save the analyst's reply as `verification/test-runs/raw/exact-record.md`.
+- Save the analyst's reply as `examples/northstar/verification/test-runs/raw/exact-record.md`.
 - Include the post ID, timestamp, and channel.
 - If the analyst cannot quote the document, record that limitation. Do not reconstruct it and call it exact.
 
 ## Then
 
-- Compare the exact text to `verification/decision-record.three-room.md`.
+- Compare the exact text to `examples/northstar/verification/decision-record.three-room.md`.
 - If they differ, use the exact text as the authoritative record and update the canonical export.
-- If the exact record still has G5/G6/condition-6 caveats, run the optional canonical consistency pass in `room/record-resolutions.md`, re-confirm, and re-audit.
+- If the exact record still has G5/G6/condition-6 caveats, run the optional canonical consistency pass in `examples/northstar/rooms/record-resolutions.md`, re-confirm, and re-audit.

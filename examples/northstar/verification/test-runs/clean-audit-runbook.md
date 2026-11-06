@@ -14,7 +14,7 @@ Use this runbook for a clean audit.
 
 ## 2. Create a new auditor
 
-- Create `room-auditor-3` with `room/agent-room-auditor.md`.
+- Create `room-auditor-3` with `examples/northstar/rooms/agent-room-auditor.md`.
 - Do not brief it with the answer.
 - Add only `room-auditor-3` to `bid-audit-clean`.
 - Confirm with `!list-agents` that the room has only the human and `room-auditor-3`.
@@ -34,7 +34,7 @@ Export the room with:
 docker exec <mattermost-container> /mattermost/bin/mmctl --local post list switch:bid-audit-clean --number 100 --show-ids --json
 ```
 
-Save the export as `verification/test-runs/raw/clean-audit.json`, and a readable reply as `raw/clean-audit.md`.
+Save the export as `examples/northstar/verification/test-runs/raw/clean-audit.json`, and a readable reply as `raw/clean-audit.md`.
 
 ## 5. What good looks like
 

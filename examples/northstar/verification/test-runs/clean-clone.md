@@ -9,7 +9,7 @@ Commands:
 git clone https://github.com/Sektorial12/bidroom.git <temporary-directory>
 cd <temporary-directory>
 python -m unittest discover -s tools/tests -v
-python tools/bidcheck.py verification/decision.example.json
+python tools/bidcheck.py examples/northstar/verification/decision.example.json
 ```
 
 Observed result:

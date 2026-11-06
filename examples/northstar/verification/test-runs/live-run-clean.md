@@ -258,7 +258,7 @@ The record captured:
 
 The record prompt contained a stale instruction to write "base 50 and partner 72 scores." The Bid Critic had actually posted **46/100** and **68/100**. The analyst recorded the posted 46/68 figures and flagged that no supporting record for 50/72 existed. The fresh-agent auditor recomputed both totals and confirmed 46/68; the 50/72 figures were not derivable from the room evidence.
 
-The exported record was then corrected to remove the discrepancy note, add an explicit rationale and actions section, mark base G6 as **fail** because the human did not approve a base bid, and split the supplier-diversity condition between the accountable owner (Priya Raman) and the Helix evidence owner (Marco Chen). The authoritative export is `verification/decision-record.live.md`.
+The exported record was then corrected to remove the discrepancy note, add an explicit rationale and actions section, mark base G6 as **fail** because the human did not approve a base bid, and split the supplier-diversity condition between the accountable owner (Priya Raman) and the Helix evidence owner (Marco Chen). The authoritative export is `examples/northstar/verification/decision-record.live.md`.
 
 The record prompt itself was later removed from the runbook. Step 12 now says to use the critic's posted scores, never a target score.
 

@@ -6,7 +6,7 @@ Use this checklist during the final demo run. The goal is to replace the cleaned
 
 - [ ] Capture `!list-agents` in each room and confirm the expected members.
 - [ ] Capture `!list-documents` in each room and confirm only the intended documents are present.
-- [ ] Confirm `verification/expected-findings.md` is **not** attached to any room.
+- [ ] Confirm `examples/northstar/verification/expected-findings.md` is **not** attached to any room.
 - [ ] Confirm the analyst and critic are not members of each other's source room.
 - [ ] Note the Switch Console, core, Mattermost, Claude Code, model, and effort versions in `docs/environment.md`.
 
@@ -25,7 +25,7 @@ Use this checklist during the final demo run. The goal is to replace the cleaned
 ## How to capture
 
 - Use the Mattermost message link or a screenshot that shows the author, timestamp, and full message.
-- Save raw text exports or screenshots under `verification/test-runs/raw/`.
+- Save raw text exports or screenshots under `examples/northstar/verification/test-runs/raw/`.
 - Keep message IDs where available.
 - Do not redact fictional sample data; do not include real credentials, tokens, or local paths.
 - If a message is too long for one screenshot, capture it in consecutive images with the author and timestamp visible.
@@ -49,4 +49,4 @@ Say so in the README and test plan. Do not describe a cleaned transcript as a pl
 - **Raw evidence:** a platform export or screenshot with author and timestamp.
 - **Cleaned transcript:** a readable reconstruction with duplicate messages removed.
 
-The repository now contains direct Mattermost JSON exports, post IDs, membership lists, the human confirmation, the fresh-agent reply, and the boundary-probe replies in `verification/test-runs/raw/`. The remaining submission gap is the demo video.
+The repository now contains direct Mattermost JSON exports, post IDs, membership lists, the human confirmation, the fresh-agent reply, and the boundary-probe replies in `examples/northstar/verification/test-runs/raw/`. The remaining submission gap is the demo video.

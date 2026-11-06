@@ -135,9 +135,9 @@ It emits a markdown decision record and returns `0` valid, `1` validation error,
 .
 ├── README.md
 ├── LICENSE
-├── sample-data/
-├── room/
-├── verification/
+├── examples/northstar/sources/
+├── examples/northstar/rooms/
+├── examples/northstar/verification/
 ├── tools/
 └── docs/
 ```

@@ -2,7 +2,7 @@
 
 **Turn a 40-page RFP into a defensible bid / no-bid decision — with cited evidence, a skeptical fit review, and a human-signed record — before anyone writes a proposal.**
 
-> **Status:** Hackathon submission in progress. The three-room source-separated run is captured. The corrected record was confirmed verbatim by the human, and a second auditor passed it with documentation caveats; the first auditor's reply was still in the room, so a clean independent audit is pending. The decision remains conditional. Direct Mattermost JSON exports, post IDs, membership lists, the second-agent reply, and the boundary probes are in `verification/test-runs/raw/`. The demo video remains.
+> **Status:** Hackathon submission in progress. The three-room source-separated run is captured. The corrected record was confirmed verbatim by the human, and a second auditor passed it with documentation caveats; the first auditor's reply was still in the room, so a clean independent audit is pending. The decision remains conditional. Direct Mattermost JSON exports, post IDs, membership lists, the second-agent reply, and the boundary probes are in `examples/northstar/verification/test-runs/raw/`. The demo video remains.
 >
 > **Public repository:** https://github.com/Sektorial12/bidroom
 
@@ -47,7 +47,7 @@ All names, dates, figures, and documents are fictional.
 - **Commercial tension:** the partner reduces margin to 11%, below the 15% policy minimum.
 - **Human decision:** bid with partner, conditional on nine named conditions covering buyer clarifications, Helix written evidence, the VP Finance margin exception, delivery capacity, supplier diversity, and the final go/no-go.
 
-In the final three-room run, the critic scored the base **50/100** and the partner route **68/100**. The included `decision.example.json` uses **68/100**, matching that run. The earlier single-room prototype scored the base **46/100** and the partner route **68/100**; it is kept as historical evidence. The **72/100** in `verification/expected-findings.md` is the pre-run expectation, not the recorded result. The decision bands are base below 65 and partner at least 65; the partner route clears the threshold by three points, which is why the decision remains conditional.
+In the final three-room run, the critic scored the base **50/100** and the partner route **68/100**. The included `decision.example.json` uses **68/100**, matching that run. The earlier single-room prototype scored the base **46/100** and the partner route **68/100**; it is kept as historical evidence. The **72/100** in `examples/northstar/verification/expected-findings.md` is the pre-run expectation, not the recorded result. The decision bands are base below 65 and partner at least 65; the partner route clears the threshold by three points, which is why the decision remains conditional.
 
 ## The agents
 
@@ -90,7 +90,7 @@ Switch is the workflow boundary, not a decorative chatbot channel.
 
 The boundary is enforced by **room membership**, not per-document Switch permissions. In the configured workflow, no agent is a member of both source rooms. A single agent cannot see both the RFP and the policy unless the human deliberately adds it to both rooms, which the setup forbids. The human handoff is the cost and the control: evidence moves only when the human carries it.
 
-To prove the boundary in the live room, run `room/boundary-probes.md`:
+To prove the boundary in the live room, run `examples/northstar/rooms/boundary-probes.md`:
 
 - The analyst in `bid-intake` must refuse to state the policy score or margin.
 - The critic in `bid-review` must refuse to quote the RFP and must say it only has the analyst matrix.
@@ -161,7 +161,7 @@ python -m unittest discover -s tools/tests -v
 Validate the example decision:
 
 ```powershell
-python tools/bidcheck.py verification/decision.example.json --md decision-record.md
+python tools/bidcheck.py examples/northstar/verification/decision.example.json --md decision-record.md
 ```
 
 Expected:
@@ -176,7 +176,7 @@ A 90–120 second walkthrough will be linked here before submission. It shows th
 
 ## Sample data
 
-All files in `sample-data/` are fictional:
+All files in `examples/northstar/sources/` are fictional:
 
 - `rfp-northstar.md` — the RFP, including the deadline conflict, missing security questionnaire, and prompt-injection appendix.
 - `capabilities.md` — Meridian's certifications, four references, capacity gap, partner, and margin.
@@ -184,13 +184,13 @@ All files in `sample-data/` are fictional:
 
 Room files:
 
-- `room/instructions-intake.md`, `room/instructions-review.md`, `room/instructions-record.md` — room-specific instructions.
-- `room/agent-bid-analyst.md`, `room/agent-bid-critic.md`, `room/agent-room-auditor.md` — agent instructions.
-- `room/kickoff-message.md`, `room/handoff-review.md`, `room/partner-evidence.md`, `room/decision-confirmation.md`, `room/handoff-record.md`, `room/audit-question.md` — chat prompts.
-- `room/boundary-probes.md` — live questions that prove the source boundary.
-- `room/record-resolutions.md` — prompts to resolve the auditor's record findings and re-run the fresh-agent test.
+- `examples/northstar/rooms/instructions-intake.md`, `examples/northstar/rooms/instructions-review.md`, `examples/northstar/rooms/instructions-record.md` — room-specific instructions.
+- `examples/northstar/rooms/agent-bid-analyst.md`, `examples/northstar/rooms/agent-bid-critic.md`, `examples/northstar/rooms/agent-room-auditor.md` — agent instructions.
+- `examples/northstar/rooms/kickoff-message.md`, `examples/northstar/rooms/handoff-review.md`, `examples/northstar/rooms/partner-evidence.md`, `examples/northstar/rooms/decision-confirmation.md`, `examples/northstar/rooms/handoff-record.md`, `examples/northstar/rooms/audit-question.md` — chat prompts.
+- `examples/northstar/rooms/boundary-probes.md` — live questions that prove the source boundary.
+- `examples/northstar/rooms/record-resolutions.md` — prompts to resolve the auditor's record findings and re-run the fresh-agent test.
 
-`verification/expected-findings.md` is the test oracle. It is not attached to any Switch room.
+`examples/northstar/verification/expected-findings.md` is the test oracle. It is not attached to any Switch room.
 
 ## Validator
 
@@ -266,17 +266,17 @@ The **three-room run** completed: the intake, review, and record rooms used sepa
 
 Live evidence:
 
-- `verification/test-runs/three-room-run.md` — readable transcript of the final three-room run, including `!list-agents`, `!list-documents`, the correction, and the second audit.
-- `verification/test-runs/raw/` — direct Mattermost JSON exports, the user-ID map, `membership.md`, `fresh-agent.md`, `human-confirmation.md`, `boundary-probes.md`, `transcript.md`, and `post-index.csv` with post IDs.
-- `verification/test-runs/live-run-clean.md` — cleaned transcript of the historical single-room prototype.
-- `verification/test-runs/raw-evidence-checklist.md` — what to capture for raw membership and screenshot evidence.
-- `verification/test-runs/clean-audit-runbook.md` — how to run an independent fresh-agent audit in a clean room.
-- `verification/test-runs/exact-record-export.md` — how to capture the live record verbatim.
-- `verification/test-runs/clean-clone.md` — clean-clone validator results.
-- `verification/decision-record.three-room.md` — reconstructed canonical record export from the three-room run; the room document itself was not exported verbatim. It includes the second agent's caveats and the clean-audit gap.
-- `verification/decision-record.live.md` — historical single-room prototype record.
+- `examples/northstar/verification/test-runs/three-room-run.md` — readable transcript of the final three-room run, including `!list-agents`, `!list-documents`, the correction, and the second audit.
+- `examples/northstar/verification/test-runs/raw/` — direct Mattermost JSON exports, the user-ID map, `membership.md`, `fresh-agent.md`, `human-confirmation.md`, `boundary-probes.md`, `transcript.md`, and `post-index.csv` with post IDs.
+- `examples/northstar/verification/test-runs/live-run-clean.md` — cleaned transcript of the historical single-room prototype.
+- `examples/northstar/verification/test-runs/raw-evidence-checklist.md` — what to capture for raw membership and screenshot evidence.
+- `examples/northstar/verification/test-runs/clean-audit-runbook.md` — how to run an independent fresh-agent audit in a clean room.
+- `examples/northstar/verification/test-runs/exact-record-export.md` — how to capture the live record verbatim.
+- `examples/northstar/verification/test-runs/clean-clone.md` — clean-clone validator results.
+- `examples/northstar/verification/decision-record.three-room.md` — reconstructed canonical record export from the three-room run; the room document itself was not exported verbatim. It includes the second agent's caveats and the clean-audit gap.
+- `examples/northstar/verification/decision-record.live.md` — historical single-room prototype record.
 
-The Markdown transcripts are readable renderings; the direct Mattermost JSON exports and post IDs are in `verification/test-runs/raw/`. The boundary probes are captured in `raw/boundary-probes.md`.
+The Markdown transcripts are readable renderings; the direct Mattermost JSON exports and post IDs are in `examples/northstar/verification/test-runs/raw/`. The boundary probes are captured in `raw/boundary-probes.md`.
 
 ## Limitations and safety
 
@@ -296,9 +296,9 @@ The Markdown transcripts are readable renderings; the direct Mattermost JSON exp
 .
 ├── README.md
 ├── LICENSE
-├── sample-data/
-├── room/
-├── verification/
+├── examples/northstar/sources/
+├── examples/northstar/rooms/
+├── examples/northstar/verification/
 ├── tools/
 └── docs/
 ```
