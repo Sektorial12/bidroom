@@ -1,7 +1,7 @@
 # Bid Decision Record - Northstar Citizen Services Portal
 
 **RFP:** AVL-2026-041  
-**Decision:** Bid with partner  
+**Decision:** Bid with partner (conditional)  
 **Human owner:** Priya Raman, Bid Director  
 **Decision date:** 2026-10-24  
 **Data note:** All names, dates, figures, and documents are fictional synthetic sample data.
@@ -28,7 +28,7 @@
 | G3 - Margin at least 15%, or VP Finance exception | pass | Base margin 18% (Capabilities §6). |
 | G4 - Key roles staffed at 50% or more for the first 90 days | fail | Lead architect unavailable January-March 2027; anticipated award January 2027 (Capabilities §4; RFP Document control). |
 | G5 - Deadline conflict clarified with the buyer | pass_with_conditions | Clarification submitted 2026-10-19; buyer response pending (RFP §5.1-§5.2). |
-| G6 - Human approval recorded | fail | Human selected the partner route; no base bid approval was recorded. |
+| G6 - Human approval recorded | pass_with_conditions | Priya Raman records the human decision; the base route was not selected; VP of Delivery sign-off remains a condition. |
 
 ## Base score
 
@@ -45,7 +45,7 @@
 | Gate | Status | Evidence |
 |---|---|---|
 | G1 - Mandatory requirements met or partner-covered with written evidence | pass_with_conditions | Helix covers ISO 27001 and the fifth reference; written evidence due 2026-10-27. |
-| G2 - Weighted qualification score at least 65/100 | pass | Partner score 68/100; 3 points above the threshold. |
+| G2 - Weighted qualification score at least 65/100 | pass_with_conditions | Partner score 68/100; 3 points above the threshold; the critic posted pass_with_conditions for headroom. |
 | G3 - Margin at least 15%, or VP Finance exception | pass_with_conditions | Partner margin 11%; VP Finance exception recorded 2026-10-23 and entered in the record. |
 | G4 - Key roles staffed at 50% or more for the first 90 days | pass_with_conditions | Helix delivery lead covers months 1-3, written commitment due 2026-10-27; engagement director allocation at 20% remains below the 50% key-role threshold and requires VP of Delivery mitigation. |
 | G5 - Deadline conflict clarified with the buyer | pass_with_conditions | RFP cover says 2026-10-28; section 5.1 says 2026-10-30; clarification submitted 2026-10-19; buyer response pending. |
@@ -89,7 +89,7 @@ The base bid is not viable: ISO 27001 is expired, only four of five references a
 | Buyer confirmation that Helix ISO 27001 and the fifth reference satisfy the bidder-level mandatory requirements | Priya Raman | 2026-10-26 | open |
 | Helix ISO 27001 certificate and fifth-reference letter | Marco Chen | 2026-10-27 | open |
 | Helix delivery-lead written commitment for months 1-3 | Marco Chen | 2026-10-27 | open |
-| VP Finance margin exception recorded in the decision record | Priya Raman | 2026-10-24 | done |
+| VP Finance margin exception recorded in the decision record | Priya Raman | 2026-10-24 | open |
 | VP of Delivery sign-off on the capacity mitigation, including engagement director allocation | VP of Delivery | 2026-10-27 | open |
 | Supplier diversity plan evidence for the 15% criterion | Priya Raman (accountable); Marco Chen (Helix evidence) | 2026-10-27 | open |
 | Final bid/no-bid confirmation after conditions close | Priya Raman | 2026-10-27 | open |

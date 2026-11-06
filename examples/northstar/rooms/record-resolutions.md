@@ -65,7 +65,7 @@ I confirm the corrected bid-decision-record verbatim as the human owner. The dec
 
 ## Prompt to re-run the audit
 
-The auditor that already saw the record is no longer fresh. Create a new auditor agent with the same `room/agent-room-auditor.md` prompt, add it to `bid-record`, and ask:
+The auditor that already saw the record is no longer fresh. Create a new auditor agent with the same `examples/northstar/rooms/agent-room-auditor.md` prompt, add it to `bid-record`, and ask:
 
 ```text
 @room-auditor-2 What is this room for, what did it decide, and why?

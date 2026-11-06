@@ -57,8 +57,8 @@ The fictional review date is **October 24, 2026**. The deadline clarification wa
 
 Paste the room-specific instructions into each room before adding agents:
 
-- `room/instructions-intake.md`
-- `room/instructions-review.md`
-- `room/instructions-record.md`
+- `examples/northstar/rooms/instructions-intake.md`
+- `examples/northstar/rooms/instructions-review.md`
+- `examples/northstar/rooms/instructions-record.md`
 
 The full setup is in `examples/northstar/docs/setup.md`.

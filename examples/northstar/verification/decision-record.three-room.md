@@ -6,7 +6,7 @@
 **Decision date:** October 24, 2026 (fictional review clock)  
 **Partner:** Helix Systems; pursuit partner manager Marco Chen  
 **Source:** three-room run, `bid-record`. Run metadata: 2026-11-06; this is not part of the fictional October 24 decision clock. This export is reconstructed from the corrected record and the second auditor's findings; it is not the exact room text.  
-**Record status:** Human decision, nine conditions, and corrected record confirmed verbatim; second agent passed it with documentation caveats, but the first auditor's reply was still in the room, so a clean independent audit is pending. The decision is conditional and not approved or submitted.  
+**Record status:** Human decision, nine conditions, and corrected record confirmed verbatim; second agent passed it with documentation caveats, but the first auditor's reply was still in the room, so a clean independent audit is pending. This export preserves the human-confirmed live statuses; the optional canonical pass in `examples/northstar/rooms/record-resolutions.md` has not been applied. The decision is conditional and not approved or submitted.  
 **Data status:** Fictional sample data. This is not a real procurement decision.
 
 ## 1. Decision and human owner
@@ -37,13 +37,13 @@ The critic's recommendation was **base: no-bid; partner: conditional, not yet a 
 | Gate | Base status | Partner status | Evidence or gap |
 |---|---|---|---|
 | G1 Mandatory requirements | fail | pass_with_conditions | M1, M2 and M4 shortfalls; Helix coverage named; ISO certificate, fifth-reference letter and written partner commitment pending. |
-| G2 Minimum score ≥65 | fail | pass | Base 50/100; partner 68/100; the numeric threshold is met. The critic marked it pass_with_conditions for headroom; this record normalizes the gate to pass. |
+| G2 Minimum score ≥65 | fail | pass_with_conditions | Base 50/100; partner 68/100; the numeric threshold is met. The critic posted `pass_with_conditions` because the route has only three points of headroom. |
 | G3 Margin ≥15% | pass | pass_with_conditions | Base 18%; partner 11%; VP Finance exception recorded October 23 by Dana Okafor; written exception pending. |
 | G4 Capacity ≥50% first 90 days | fail | pass_with_conditions | Architect unavailable January–March 2027; engagement director at 20%; Helix lead available but uncommitted in writing. |
 | G5 Deadline clarity | pass_with_conditions | pass_with_conditions | Cover October 28 vs §5.1 October 30; clarification submitted October 19 and acknowledged; response pending; no date assumed. |
-| G6 Human approval | fail | pass_with_conditions | Base route not approved; partner decision recorded. VP of Delivery sign-off and final go/no-go pending. |
+| G6 Human approval | pass_with_conditions | pass_with_conditions | Decision owner Priya Raman; human decision recorded. Base route was not selected. VP of Delivery sign-off and final go/no-go pending. |
 
-Base G6 is recorded as **fail** because the human selected the partner route and no base bid was approved. The critic's intermediate review used `pass_with_conditions` before the decision; the final record corrects that.
+The base G6 status is the critic's posted `pass_with_conditions`; the base route itself was not approved. This export preserves that posted status rather than normalizing it.
 
 ## 4. Weighted score — critic's posted results
 
@@ -80,7 +80,7 @@ The partner margin is 11% against a 15% policy minimum (capability §6). The gat
 | 3 | Buyer confirmation that Helix ISO and the fifth reference satisfy bidder-level M1/M2 (human-added; no critic-table counterpart) | Priya Raman | October 26 | open — buyer confirmation pending |
 | 4 | Helix ISO certificate and fifth-reference letter | Marco Chen | October 27 | open — documents not received |
 | 5 | Helix delivery-lead written commitment for months 1–3 | Marco Chen | October 27 | open — commitment not received |
-| 6 | VP Finance margin exception recorded in the decision record | Priya Raman | October 24 | done — written countersignature is tracked as a separate action |
+| 6 | VP Finance margin exception recorded in the decision record | Priya Raman | October 24 | open — record entry done; written countersignature tracked as a separate action |
 | 7 | VP of Delivery sign-off on capacity mitigation, including engagement director allocation | VP of Delivery (name not supplied) | October 27 | open — sign-off pending |
 | 8 | Supplier diversity plan evidence for the 15% criterion | Priya Raman | October 27 | open — evidence pending |
 | 9 | Final go/no-go after conditions close | Priya Raman | October 27 | open — scheduled |
@@ -114,25 +114,22 @@ The human owner therefore chose **Bid with partner**, conditional on the nine na
 
 ## 10. Second audit findings — documentation caveats
 
-`room-auditor-2` confirmed the live record is internally coherent and the arithmetic is correct. This canonical export applies three normalizations and preserves the auditor's caveats:
+`room-auditor-2` confirmed the live record is internally coherent and the arithmetic is correct. This export preserves the human-confirmed statuses and does not apply the optional canonical pass.
 
-**Canonical normalizations:**
-
-- Base G6 is **fail** because the base route was not approved. The live record's G6 row was stale ("Decision outstanding").
-- Partner G2 is **pass** because 68/100 meets the 65 threshold. The critic used `pass_with_conditions` for headroom.
-- Condition 6 is **done** because the record entry exists. The written VP Finance exception is a separate action.
-
-**Remaining caveats:**
+**Caveats preserved from the live record:**
 
 1. **G5 row is not verbatim.** The record uses one human-directed wording, a third wording different from both critic tables. It is disclosed in the row, but it is a substitution, not a copy.
 2. **Critic review contradicts itself on G3 partner.** The earlier base narrative says partner 68/100 "with G3 failing"; the later table says `pass_with_conditions`. The record treats the table as current, as instructed.
-3. **Condition 3 remains a divergence:** no critic-table counterpart, and no buyer confirmation that Helix evidence satisfies bidder-level M1/M2.
-4. **`critic-review` description says "copied verbatim"** but the base score table was added later by the analyst from the critic's posted components. The numbers agree with the critic's 250 ÷ 5 line.
-5. **No named VP of Delivery**; condition 7's owner is a role.
-6. **No page limit, format rules, file-size limit, or Attachment C content** in the room.
-7. **No evidence any condition has closed.**
+3. **G6 wording is stale.** The live record's G6 row says "Decision outstanding" even though the decision is recorded. The posted status is `pass_with_conditions`; the row text should be read with that in mind.
+4. **Condition 6 is labelled open** although the record entry is done; the written VP Finance countersignature is tracked as a separate action.
+5. **Condition 3 remains a divergence:** no critic-table counterpart, and no buyer confirmation that Helix evidence satisfies bidder-level M1/M2.
+6. **`critic-review` description says "copied verbatim"** but the base score table was added later by the analyst from the critic's posted components. The numbers agree with the critic's 250 ÷ 5 line.
+7. **No named VP of Delivery**; condition 7's owner is a role.
+8. **Policy approval gap:** the bid policy requires the pursuit lead plus the VP of Delivery for a bid-with-partner decision. The record captures the VP of Delivery capacity sign-off as condition 7 but not a separate VP approval of the bid-with-partner decision. This remains an open approval gap.
+9. **No page limit, format rules, file-size limit, or Attachment C content** in the room.
+10. **No evidence any condition has closed.**
 
-The record is confirmed and conditional; these are documentation caveats and canonical normalizations, not approval defects.
+The record is confirmed and conditional; these are live-record disclosures and approval gaps, not a post-confirmation normalization.
 
 ## 11. Uncertainty and open items
 
@@ -142,6 +139,7 @@ The record is confirmed and conditional; these are documentation caveats and can
 - **Helix evidence:** ISO certificate, fifth-reference letter, written partner commitment, and delivery-lead written commitment are pending. No teaming agreement is in the supplied evidence.
 - **Margin exception:** recorded, but the written exception has not been supplied.
 - **Capacity:** engagement director at 20%; VP of Delivery must confirm key-role status or provide written mitigation.
+- **Policy approval gap:** the policy requires the pursuit lead plus the VP of Delivery for a bid-with-partner decision. The record captures the VP of Delivery capacity sign-off as condition 7, but not a separate VP approval of the bid-with-partner decision.
 - **Supplier diversity:** Meridian has no diverse-supplier evidence; Helix certification and plan evidence required.
 - **Score headroom:** the partner route is 3 points above the minimum; any slippage can drop it below 65.
 - **Record confirmation:** the human confirmed the nine conditions and the corrected record verbatim at the run review. This is run metadata, not part of the fictional October 24 decision clock.

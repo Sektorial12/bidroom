@@ -29,7 +29,7 @@ Do not use the real system date. Do not say a deadline has passed based on the r
 
 ## Critic output
 
-Follow the output contract in `room/agent-bid-critic.md`:
+Follow the output contract in `examples/northstar/rooms/agent-bid-critic.md`:
 
 - G1–G6 gate results, with base and partner statuses separate.
 - Weighted score with evidence.

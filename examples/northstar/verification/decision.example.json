@@ -78,8 +78,8 @@
     {
       "id": "G2",
       "text": "Weighted qualification score at least 65/100",
-      "status": "pass",
-      "evidence": "Partner score 68/100; 3 points above the threshold."
+      "status": "pass_with_conditions",
+      "evidence": "Partner score 68/100; 3 points above the threshold; the critic posted pass_with_conditions for headroom."
     },
     {
       "id": "G3",
@@ -150,7 +150,7 @@
       "text": "VP Finance margin exception recorded in the decision record",
       "owner": "Priya Raman",
       "due_date": "2026-10-24",
-      "status": "done"
+      "status": "open"
     },
     {
       "text": "VP of Delivery sign-off on the capacity mitigation, including engagement director allocation",
@@ -277,8 +277,8 @@
     {
       "id": "G6",
       "text": "Human approval recorded",
-      "status": "fail",
-      "evidence": "Human selected the partner route; no base bid approval was recorded."
+      "status": "pass_with_conditions",
+      "evidence": "Priya Raman records the human decision; the base route was not selected; VP of Delivery sign-off remains a condition."
     }
   ],
   "base_requirements": [

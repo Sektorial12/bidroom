@@ -28,7 +28,7 @@ Do not use the real system date. Do not say a deadline has passed based on the r
 
 ## Analyst output
 
-Follow the output contract in `room/agent-bid-analyst.md`:
+Follow the output contract in `examples/northstar/rooms/agent-bid-analyst.md`:
 
 - RFP facts with section citations.
 - M1–M6 mandatory requirements with status and evidence or gap.

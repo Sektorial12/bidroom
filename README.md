@@ -4,7 +4,7 @@
 
 BidRoom turns a qualification decision into a durable, auditable artifact. The generic engine is policy-driven; the Northstar pursuit is a frozen reference example.
 
-> **Status:** The policy-driven engine, CLI, templates, and Northstar demo are complete. The demo video is still pending.
+> **Status:** The policy-driven engine, CLI, templates, and Northstar demo are complete. The exact live record export, clean independent audit, and demo video are still pending.
 >
 > **Public repository:** https://github.com/Sektorial12/bidroom
 
@@ -108,7 +108,7 @@ The original demo is preserved under `examples/northstar/`.
 - Human owner: **Priya Raman, Bid Director**
 - Nine confirmed conditions and a no-bid fallback.
 
-The demo includes the source packet, three-room prompts, decision records, transcripts, raw Mattermost exports, and adversarial fixtures.
+The demo includes the source packet, three-room prompts, decision records, transcripts, raw Mattermost exports, and adversarial fixtures. The canonical record is a reconstructed export; the exact room document and a clean independent audit are still pending, as documented in the demo runbooks.
 
 ```powershell
 python -m unittest discover -s tools/tests -q

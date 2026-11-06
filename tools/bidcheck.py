@@ -856,6 +856,8 @@ def _render_items(title: str, items: list[dict[str, Any]]) -> list[str]:
 
 def render_markdown(data: dict[str, Any]) -> str:
     decision = DECISION_LABELS.get(data["decision"], data["decision"])
+    if data["decision"] == "bid_with_partner" and _present(data.get("fallback")):
+        decision += " (conditional)"
     lines: list[str] = [
         f"# Bid Decision Record - {data['pursuit']}",
         "",
