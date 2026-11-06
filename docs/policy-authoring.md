@@ -90,9 +90,11 @@ A policy does not have to use every gate type. Set a gate rule to `null` or omit
 
 Rules:
 
-- `margin_gate: null` disables the margin-exception requirement and the margin gate consistency check.
+- `requirements_gate: null` disables the gate-consistency check, but the requirement IDs, statuses, and evidence are still validated.
 - `score_gate: null` disables the gate-alignment check, but the policy's `scoring.minimum_score` still applies to bid decisions.
+- `margin_gate: null` disables the margin-exception requirement and the margin gate consistency check.
 - `capacity_gate` and `capacity_requirement` must both be set or both be `null`.
+- `human_approval_gate: null` disables the gate-consistency check, but `human_signoff` and the human approval reference are still required.
 - Any gate defined in `gates` must still appear in the decision record's gate table; the engine validates its structure and evidence.
 - A gate with no automatic rule is effectively a manual gate. The human and critic still fill it in.
 
