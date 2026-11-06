@@ -7,6 +7,7 @@ Use this runbook for a clean audit.
 ## 1. Create a clean audit room
 
 - Create a new Switch room, `bid-audit-clean`.
+- Paste `examples/northstar/rooms/instructions-audit.md` into the room instructions.
 - Put only the final record content in it: the confirmed `bid-decision-record` text.
 - Do **not** add `analyst-matrix`, `critic-review`, `rfp-northstar`, or `bid-policy`.
 - Do **not** invite `room-auditor` or `room-auditor-2`.
