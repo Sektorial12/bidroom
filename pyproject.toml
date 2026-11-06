@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bidroom"
+version = "0.1.0"
+description = "Policy-driven bid/no-bid decision records for Switch rooms."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "BidRoom contributors" }]
+keywords = ["bid", "no-bid", "rfp", "switch", "decision-record"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Business",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = []
+
+[project.scripts]
+bidroom = "bidroom.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Sektorial12/bidroom"
+Repository = "https://github.com/Sektorial12/bidroom"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bidroom = ["templates/**/*.md", "templates/**/*.json", "schema/*.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
