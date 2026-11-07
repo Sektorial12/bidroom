@@ -15,7 +15,7 @@ python -m unittest discover -s tests -v
 python -m unittest discover -s tools/tests -v
 ```
 
-The first suite covers the generic policy engine, scaffolding, and a second policy. The second suite is the Northstar demo conformance suite.
+The first suite covers the generic policy engine, scaffolding, and a second policy. The second suite is the Northstar example conformance suite.
 
 ## Style
 
@@ -30,4 +30,4 @@ The first suite covers the generic policy engine, scaffolding, and a second poli
 
 - Explain the policy or schema impact.
 - Include a test that fails before the change and passes after it.
-- Do not commit generated records, local settings, credentials, or raw room exports with personal identifiers.
+- Do not commit generated records, local settings, credentials, or personal data.

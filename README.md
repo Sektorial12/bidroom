@@ -4,10 +4,6 @@
 
 BidRoom turns a qualification decision into a durable, auditable artifact. The generic engine is policy-driven; the Northstar pursuit is a frozen reference example.
 
-> **Status:** The policy-driven engine, CLI, templates, and Northstar demo are complete. The exact live decision record and a record-only clean-room audit are captured in `examples/northstar/verification/test-runs/raw/`; the audit is a new-session reconstruction, not an independent third-party audit. The demo video and submission are still pending.
->
-> **Public repository:** https://github.com/Sektorial12/bidroom
-
 ## The problem
 
 Sales and proposal teams receive more RFPs than they can pursue well. Bid/no-bid decisions are often made in email or chat, without a shared evidence base or a record of why the team committed.
@@ -95,12 +91,11 @@ Read more:
 
 - `docs/policy-authoring.md`
 - `docs/record-format.md`
-- `docs/switch-setup.md`
 - `docs/architecture.md`
 
 ## Northstar reference example
 
-The original demo is preserved under `examples/northstar/`.
+The Northstar reference example is under `examples/northstar/`.
 
 - Base: **50/100**
 - Partner: **68/100**
@@ -108,7 +103,7 @@ The original demo is preserved under `examples/northstar/`.
 - Human owner: **Priya Raman, Bid Director**
 - Nine confirmed conditions and a no-bid fallback.
 
-The demo includes the source packet, three-room prompts, decision records, transcripts, raw Mattermost exports, adversarial fixtures, the exact live record (`examples/northstar/verification/test-runs/raw/exact-record.md`), and the record-only audit reply (`examples/northstar/verification/test-runs/raw/clean-audit.md`). The canonical Markdown record is a readable reconstruction; the exact export is authoritative.
+The example includes the fictional source packet, room prompts, policy, decision fixtures, and an example decision record.
 
 ```powershell
 python -m unittest discover -s tools/tests -q
@@ -129,7 +124,7 @@ See `examples/northstar/README.md`.
 .
 ├── src/bidroom/          # policy engine, CLI, schemas, templates
 ├── tests/                # generic engine and scaffolding tests
-├── examples/northstar/   # frozen Northstar demo
+├── examples/northstar/   # Northstar reference example
 ├── tools/                # source-checkout CLI and legacy conformance adapter
 ├── docs/                 # generic architecture and authoring docs
 ├── pyproject.toml
@@ -158,12 +153,6 @@ python -m unittest discover -s tools/tests -v
 - All sample data is fictional.
 - Do not commit credentials, real procurement data, or personal data.
 - The Switch boundary is room membership, not per-document permissions. If the human adds both source agents to the same room, the boundary is broken.
-
-## Hackathon
-
-Built for the **Flip the Switch Hackathon 2026** — **Best Business Workflow** track.
-
-The workflow uses three Switch rooms to separate source evidence from bid policy, with a human carrying the handoff and owning the decision.
 
 ## License
 

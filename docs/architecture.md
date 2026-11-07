@@ -21,7 +21,7 @@ The product has four layers:
 | `src/bidroom/cli.py` | `bidroom` command-line interface. |
 | `src/bidroom/templates/` | Generic room, agent, and project templates. |
 | `src/bidroom/schema/` | JSON schemas for policies and decision records. |
-| `examples/northstar/` | Frozen Northstar demo with sources, rooms, records, and raw evidence. |
+| `examples/northstar/` | Northstar reference example with sources, rooms, and records. |
 | `tools/bidcheck.py` | Legacy Northstar conformance adapter. |
 
 ## Engine flow
@@ -45,7 +45,7 @@ Record room: matrix + review + human decision ──▶ decision record
         human confirms, fresh auditor reconstructs
 ```
 
-The human is the only member of all three rooms. The analyst and critic never share a source room. The boundary is membership, not per-document permissions; the setup and `!list-agents` capture make it visible.
+The human is the only member of all three rooms. The analyst and critic never share a source room. The boundary is membership, not per-document permissions; room membership and the agent list make it visible.
 
 ## Policy and record schemas
 
@@ -53,7 +53,6 @@ The human is the only member of all three rooms. The analyst and critic never sh
 - Decision schema: `src/bidroom/schema/decision.schema.json`
 - Policy authoring: `docs/policy-authoring.md`
 - Record format: `docs/record-format.md`
-- Switch setup: `docs/switch-setup.md`
 
 ## Security and limits
 
@@ -65,4 +64,4 @@ The human is the only member of all three rooms. The analyst and critic never sh
 
 ## Reference example
 
-The Northstar demo is under `examples/northstar/`. It preserves the original three-room run, the base 50/100 and partner 68/100 scores, the conditional bid-with-partner decision, and the raw Mattermost exports. See `examples/northstar/README.md`.
+The Northstar reference example is under `examples/northstar/`. It includes the fictional source packet, room prompts, policy, decision fixtures, and an example decision record. See `examples/northstar/README.md`.

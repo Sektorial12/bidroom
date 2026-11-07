@@ -6,7 +6,7 @@
 **Decision date:** 2026-10-24  
 **Data note:** All names, dates, figures, and documents are fictional synthetic sample data.
 
-**Human approval reference:** Mattermost room message from Priya Raman, 2026-10-24 (fictional).
+**Human approval reference:** Room message from Priya Raman, 2026-10-24 (fictional).
 
 ## Requirements and evidence
 

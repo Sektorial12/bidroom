@@ -12,6 +12,6 @@
   "sources": {
     "intake": ["sources/rfp-northstar.md", "sources/capabilities.md"],
     "review": ["sources/bid-policy.md", "sources/capabilities.md"],
-    "record": ["verification/decision-record.three-room.md"]
+    "record": ["verification/decision-record.example.md"]
   }
 }

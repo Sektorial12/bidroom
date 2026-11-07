@@ -12,7 +12,7 @@ Use the repository's private security advisory feature for vulnerabilities. Do n
 
 - Keep real RFP, bidder, pricing, and employee data out of the public repository.
 - Use fictional or synthetic data in examples and tests.
-- Redact local usernames, hostnames, tokens, and message links from public evidence.
+- Redact personal data, hostnames, tokens, and message links from shared data.
 - Do not put credentials in room documents or policy files.
 
 ## Validator limits

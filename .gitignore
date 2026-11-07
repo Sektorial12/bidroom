@@ -1,4 +1,4 @@
-# Local environment and generated files
+# Environment and generated files
 .env
 .env.*
 *.local

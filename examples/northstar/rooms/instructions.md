@@ -61,4 +61,4 @@ Paste the room-specific instructions into each room before adding agents:
 - `examples/northstar/rooms/instructions-review.md`
 - `examples/northstar/rooms/instructions-record.md`
 
-The full setup is in `examples/northstar/docs/setup.md`.
+Create the three rooms and add the matching agents. The room prompts in this directory define the handoff.

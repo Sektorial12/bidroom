@@ -1,6 +1,6 @@
 # Meridian Digital Services — Capability Snapshot
 
-> **Fictional sample data.** Meridian Digital Services, its people, certifications, references, prices, and margins are entirely fictional. This document exists only for the BidRoom demo.
+> **Fictional sample data.** Meridian Digital Services, its people, certifications, references, prices, and margins are entirely fictional. This document exists only for the BidRoom reference example.
 
 ## 1. Company profile
 

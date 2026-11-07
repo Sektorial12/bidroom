@@ -1,6 +1,6 @@
 # Meridian Digital Services — Bid / No-Bid Policy
 
-> **Fictional sample data.** This policy is entirely fictional and exists only for the BidRoom demo. It is not legal, procurement, or financial advice.
+> **Fictional sample data.** This policy is entirely fictional and exists only for the BidRoom reference example. It is not legal, procurement, or financial advice.
 
 ## 1. Purpose
 

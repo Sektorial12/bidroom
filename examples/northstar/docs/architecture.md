@@ -11,7 +11,7 @@ A deterministic Python validator checks the structured decision record after the
 | Component | Role |
 |---|---|
 | Switch Console | Creates the rooms and agents; manages membership and settings. |
-| Local Switch server | Connects Mattermost and the room context. Runs in Docker. |
+| Switch server | Connects the room context and messaging. |
 | `bid-intake` | Human + `bid-analyst`; holds `rfp-northstar` and `capability-snapshot`; no policy. |
 | `bid-review` | Human + `bid-critic`; holds `bid-policy`, `capability-snapshot`, and `analyst-matrix`; no RFP. |
 | `bid-record` | Human + `bid-analyst`; holds `analyst-matrix`, `critic-review`, and `bid-decision-record`; no RFP or policy. |
@@ -145,7 +145,7 @@ It emits a markdown decision record and returns `0` valid, `1` validation error,
 ## Security and privacy
 
 - All sample data is fictional.
-- The agents run in an empty local working directory outside the repository.
+- The agents run in an isolated working directory outside the repository.
 - The authoritative materials live in the Switch rooms, not in agent-local files.
 - Agents have no shell, network, or external-action tools.
 - No agent can approve, submit, price, or contact a client.
@@ -153,9 +153,9 @@ It emits a markdown decision record and returns `0` valid, `1` validation error,
 
 ## Limitations
 
-- BidRoom is a hackathon prototype, not a production bid-management or legal system.
+- BidRoom is a decision-support prototype, not a production bid-management or legal system.
 - It checks only the materials supplied in the rooms.
 - It does not verify the truth of the RFP or capability evidence.
 - It does not generate a proposal or submit a bid.
-- The room-membership boundary depends on the human not adding both source agents to the same room. The setup and `!list-agents` check make that visible.
+- The room-membership boundary depends on the human not adding both source agents to the same room. Room membership and the agent list make that visible.
 - The scoring model is illustrative and must be calibrated for a real organization.
