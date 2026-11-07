@@ -4,6 +4,16 @@
 
 BidRoom turns a qualification decision into a durable, auditable artifact. The generic engine is policy-driven; the Northstar pursuit is a frozen reference example.
 
+## At a glance
+
+| Area | Detail |
+|---|---|
+| **Engine** | Policy-driven Python validator and Markdown renderer |
+| **Workflow** | Three Switch rooms with role-separated Claude Code agents |
+| **Reference example** | Northstar RFP: base 50/100, partner 68/100, conditional bid with partner |
+| **Tests** | 11 generic engine/scaffolding tests and 49 example conformance tests |
+| **Runtime** | Python 3.11+, standard library only |
+
 ## The problem
 
 Sales and proposal teams receive more RFPs than they can pursue well. Bid/no-bid decisions are often made in email or chat, without a shared evidence base or a record of why the team committed.
@@ -61,6 +71,15 @@ From a source checkout without installing:
 ```powershell
 python tools/bidroom.py check --project examples/northstar
 ```
+
+## CLI
+
+| Command | Purpose |
+|---|---|
+| `bidroom init` | Create a project with a policy, manifest, sources, rooms, agents, and record folders. |
+| `bidroom check` | Validate the project manifest, policy, and source paths. |
+| `bidroom validate` | Validate a decision record against a policy. |
+| `bidroom render` | Render a validated decision record to Markdown. |
 
 ## Policy-driven, not scenario-specific
 
@@ -153,6 +172,10 @@ python -m unittest discover -s tools/tests -v
 - All sample data is fictional.
 - Do not commit credentials, real procurement data, or personal data.
 - The Switch boundary is room membership, not per-document permissions. If the human adds both source agents to the same room, the boundary is broken.
+
+## Contributing
+
+See `CONTRIBUTING.md` for the development workflow and `SECURITY.md` for reporting and data-handling guidance.
 
 ## License
 

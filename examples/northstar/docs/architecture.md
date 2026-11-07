@@ -107,7 +107,7 @@ The record contains:
 
 ## Validator
 
-`tools/bidcheck.py` validates:
+`tools/bidcheck.py` is the legacy Northstar conformance adapter. It validates the example-specific rules below; the generic engine lives in `src/bidroom/`.
 
 - Required fields and decision enum.
 - Human signoff and a named human owner; agent, project-agent, and model names plus placeholders are rejected.

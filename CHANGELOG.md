@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Tightened the public documentation and repository layout.
+- Added an at-a-glance overview and a CLI reference to the README.
+
 ## 0.1.0 — 2026-11-06
 
 - Added policy-driven decision engine in `src/bidroom`.
