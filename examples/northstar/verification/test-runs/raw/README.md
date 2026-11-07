@@ -1,6 +1,6 @@
 # Raw evidence
 
-Captured from the local Mattermost instance on 2026-11-06 with:
+Captured from the local Mattermost instance on 2026-11-06, with a follow-up exact-record and clean-audit capture on 2026-11-07. The Mattermost exports used:
 
 ```text
 docker exec <mattermost-container> /mattermost/bin/mmctl --local post list switch:<channel> --number 200 --show-ids --json
@@ -14,7 +14,10 @@ Files:
 - `user-map.json` — user IDs mapped to role labels (`human`, `bid-analyst`, `auditor-1`, etc.); **no emails or personal usernames**.
 - `transcript.md` — readable transcript with timestamps and post IDs.
 - `membership.md` — raw `!list-agents` and `!list-documents` replies.
-- `fresh-agent.md` — raw `room-auditor-2` second-agent reply; the first auditor's reply was still in the room, so a clean audit is pending.
+- `fresh-agent.md` — raw `room-auditor-2` second-agent reply from the first room; the first auditor's reply was still in the room, so that was not a clean-room audit.
+- `exact-record.md` — exact `bid-decision-record` document text from the 2026-11-07 three-room run, captured from the Switch room document store. This is the authoritative live record; `decision-record.three-room.md` is the canonical readable reconstruction.
+- `clean-audit.md` — exact `room-auditor-2` reply from `bid-audit-clean`, a room containing only `exact-record.md`. The auditor recomputed base 50 and partner 68, listed all nine conditions, and flagged the record's internal condition-6 and attribution ambiguities. It is a new-session reconstruction, not an independent third-party audit.
+- `final-critic-review.md` — the critic's final corrected review from the 2026-11-07 run: base 50, partner 68, M4 conflicting, partner G3 `pass_with_conditions`.
 - `human-confirmation.md` — raw human record confirmation.
 - `boundary-probes.json` — raw probe posts and agent replies.
 - `boundary-probes.md` — readable boundary-probe transcript.

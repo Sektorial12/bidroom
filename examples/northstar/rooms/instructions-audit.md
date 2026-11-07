@@ -7,13 +7,13 @@ Reconstruct the decision from the final decision record alone. This room exists 
 ## Members
 
 - Human decision owner.
-- `@room-auditor-3`.
+- The chosen auditor: `@room-auditor-3` preferred, `@room-auditor-2` fallback.
 
-Do not add `@bid-analyst`, `@bid-critic`, `room-auditor`, or `room-auditor-2`.
+Do not add `@bid-analyst`, `@bid-critic`, or the first `room-auditor`.
 
 ## Authoritative document
 
-Only `bid-decision-record`.
+Only the exact `bid-decision-record` content from `verification/test-runs/raw/exact-record.md`.
 
 Do not add the RFP, capability snapshot, policy, analyst matrix, or critic review.
 
@@ -31,3 +31,5 @@ Do not add the RFP, capability snapshot, policy, analyst matrix, or critic revie
 @room-auditor-3 What is this room for, what did it decide, and why?
 List all nine conditions and open risks.
 ```
+
+If using the fallback, replace `@room-auditor-3` with `@room-auditor-2`. The captured 2026-11-07 audit used `room-auditor-2` in a record-only room; caption it **"new-session reconstruction; record-only room."**

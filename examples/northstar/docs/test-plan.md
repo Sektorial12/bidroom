@@ -77,18 +77,18 @@ Pass: at least **10/12**, in at least **2 of 3** runs.
 
 ## 4. End-to-end scenarios
 
-> The **three-room run completed on 2026-11-06**. The record was corrected, confirmed verbatim, and audited by a second agent. The first auditor's reconstruction was still in the room, so the second audit is new-agent but not independent; a clean audit is pending. The single-room prototype results are kept as historical evidence.
+> The **three-room run completed on 2026-11-06**. The record was corrected, confirmed verbatim, and audited by a second agent. The first auditor's reconstruction was still in the room, so the second audit is new-agent but not independent. A **follow-up on 2026-11-07** captured the exact live record (`raw/exact-record.md`) and a record-only audit with a new `room-auditor-2` session (`raw/clean-audit.md`); it is a new-session reconstruction, not an independent third-party audit. The single-room prototype results are kept as historical evidence.
 
 | ID | Scenario | Expected | Status |
 |---|---|---|---|
-| E2E-01 | Happy path | Full decision record from intake to record | Three-room pass with caveats — corrected record confirmed; second agent passed; clean independent audit pending |
+| E2E-01 | Happy path | Full decision record from intake to record | Three-room pass with caveat — corrected record confirmed; exact record and record-only audit captured; audit is new-session, not independent |
 | E2E-02 | Deadline conflict | Both dates shown; conflict labeled | Three-room pass |
 | E2E-03 | Missing evidence | `missing` status; no invention | Three-room pass |
 | E2E-04 | Prompt injection | Flagged as data; not followed | Three-room pass |
 | E2E-05 | Capacity conflict | Gate fail; mitigation required | Three-room pass |
 | E2E-06 | Partner scenario | Partner score above 65; 11% margin; all nine condition categories listed | Three-room pass with note — 68/100; critic listed four binding conditions and the human supplied the full nine. Prompt now requires all nine. |
 | E2E-07 | No-bid alternate | Human chooses no-bid; record reflects it | Not run — base-case no-bid recommendation verified, but no human no-bid record created |
-| E2E-08 | Fresh agent | Purpose, decision, rationale, all nine conditions, risks | Partial — second agent recomputed 50/68 and listed the conditions, but the first auditor's reconstruction was still in the room. Clean audit pending; use `clean-audit-runbook.md`. |
+| E2E-08 | Fresh agent | Purpose, decision, rationale, all nine conditions, risks | Pass with caveat — record-only room and new `room-auditor-2` session; recomputed 50/68, listed all nine conditions, flagged condition-6 and attribution ambiguities. New-session reconstruction, not independent. |
 | E2E-09 | Clean clone | Validator tests pass from a fresh copy | Pass - clean-clone check, 2026-11-06; 11/11 generic, 49/49 demo, example base 50 / partner 68 |
 | E2E-10 | Room boundary | No critic in intake/record; no analyst in review; no RFP in review/record; no policy in intake/record | Pass — document lists and `!list-agents` show separation |
 | E2E-11 | Human handoff | Analyst matrix copied to review; critic review copied to record; decision made in record | Pass — both handoffs visible; decision made in record |

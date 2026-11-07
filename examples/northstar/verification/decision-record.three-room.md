@@ -5,8 +5,8 @@
 **Human owner:** Priya Raman, Bid Director  
 **Decision date:** October 24, 2026 (fictional review clock)  
 **Partner:** Helix Systems; pursuit partner manager Marco Chen  
-**Source:** three-room run, `bid-record`. Run metadata: 2026-11-06; this is not part of the fictional October 24 decision clock. This export is reconstructed from the corrected record and the second auditor's findings; it is not the exact room text.  
-**Record status:** Human decision, nine conditions, and corrected record confirmed verbatim; second agent passed it with documentation caveats, but the first auditor's reply was still in the room, so a clean independent audit is pending. This export preserves the human-confirmed live statuses; the optional canonical pass in `examples/northstar/rooms/record-resolutions.md` has not been applied. The decision is conditional and not approved or submitted.  
+**Source:** three-room run, `bid-record`. Run metadata: 2026-11-06. The exact live document text is captured in `test-runs/raw/exact-record.md`; this file is the canonical readable reconstruction and the two agree on the decision, scores, nine conditions, and fallback.  
+**Record status:** Human decision, nine conditions, and corrected record confirmed verbatim. A clean-room audit was captured on 2026-11-07 in `bid-audit-clean` with a record-only room and a new `room-auditor-2` session (`test-runs/raw/clean-audit.md`); it recomputed base 50 and partner 68 and flagged the condition-6 and attribution ambiguities. This is a new-session reconstruction, not an independent third-party audit. The decision is conditional and not approved or submitted.  
 **Data status:** Fictional sample data. This is not a real procurement decision.
 
 ## 1. Decision and human owner
@@ -112,9 +112,9 @@ The human owner therefore chose **Bid with partner**, conditional on the nine na
 | Collect supplier diversity plan evidence for the 15% criterion | Priya Raman | October 27 | open |
 | Record the final go/no-go after conditions close | Priya Raman | October 27 | open |
 
-## 10. Second audit findings — documentation caveats
+## 10. Clean-room audit findings — documentation caveats
 
-`room-auditor-2` confirmed the live record is internally coherent and the arithmetic is correct. This export preserves the human-confirmed statuses and does not apply the optional canonical pass.
+`room-auditor-2` confirmed the live record is internally coherent and the arithmetic is correct. A follow-up record-only audit on 2026-11-07 (`test-runs/raw/clean-audit.md`) recomputed base 50 and partner 68, listed all nine conditions, and found no conflict between the decision and its rationale. It also flagged the condition-6 and attribution ambiguities below. This export preserves the human-confirmed statuses and does not apply the optional canonical pass.
 
 **Caveats preserved from the live record:**
 
@@ -128,6 +128,10 @@ The human owner therefore chose **Bid with partner**, conditional on the nine na
 8. **Policy approval gap:** the bid policy requires the pursuit lead plus the VP of Delivery for a bid-with-partner decision. The record captures the VP of Delivery capacity sign-off as condition 7 but not a separate VP approval of the bid-with-partner decision. This remains an open approval gap.
 9. **No page limit, format rules, file-size limit, or Attachment C content** in the room.
 10. **No evidence any condition has closed.**
+11. **Condition 6 mixes two obligations:** the record entry (done October 24) and the written VP Finance exception (due October 26). The row is labelled open because the written exception is pending; the audit calls this an internal inconsistency rather than a factual error.
+12. **Attribution ambiguity on the margin exception:** the margin table attributes the October 23 approval to `critic-review` G3/condition 1, while the gate table attributes it to a human update; critic condition 1 is the still-pending written exception.
+13. **Self-containment limits:** the record cites the human confirmation, `analyst-matrix`, and `critic-review`, but those sources are not in the audit room. The auditor verified internal consistency and arithmetic, not the quoted tables against the originals.
+14. **Unresolved condition-list gaps:** the Helix teaming letter, City of Norvale reference, signed Helix subcontract/teaming terms, and a separate VP of Delivery approval for the partner bid remain flagged for resolution before final go/no-go.
 
 The record is confirmed and conditional; these are live-record disclosures and approval gaps, not a post-confirmation normalization.
 
@@ -143,7 +147,7 @@ The record is confirmed and conditional; these are live-record disclosures and a
 - **Supplier diversity:** Meridian has no diverse-supplier evidence; Helix certification and plan evidence required.
 - **Score headroom:** the partner route is 3 points above the minimum; any slippage can drop it below 65.
 - **Record confirmation:** the human confirmed the nine conditions and the corrected record verbatim at the run review. This is run metadata, not part of the fictional October 24 decision clock.
-- **Fresh-agent audit:** `room-auditor-2` audited the corrected record and passed it with the documentation caveats in §10. The first auditor is historical.
+- **Clean-room audit:** a record-only room with a new `room-auditor-2` session recomputed base 50 and partner 68 and listed all nine conditions; see `test-runs/raw/clean-audit.md`. It flagged the condition-6 and attribution ambiguities in §10. This is a new-session reconstruction, not an independent third-party audit.
 
 ## 12. Data confirmation and record sources
 
@@ -155,4 +159,4 @@ Sources:
 - Meridian and Helix capability: `capability-snapshot` (sections cited above).
 - Gate results and scores: `critic-review`.
 - Decision, conditions, and margin exception: human messages in `bid-record`.
-- Auditor findings: `room-auditor-2` reply in `bid-record` (run metadata 2026-11-06; not part of the fictional decision clock).
+- Auditor findings: `test-runs/raw/clean-audit.md` (record-only room, 2026-11-07; run metadata, not part of the fictional decision clock).

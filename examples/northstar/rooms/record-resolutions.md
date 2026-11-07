@@ -53,7 +53,7 @@ Use this if the judge requires one exact record with no gate-status caveats. It 
 Then quote the full updated record exactly as written. Do not summarize.
 ```
 
-After the analyst posts the updated record, re-post the human confirmation. For the final fresh-agent test, use a new room `bid-audit-clean` and a new `room-auditor-3`; see `examples/northstar/verification/test-runs/clean-audit-runbook.md`. Do not reuse the record room that contains the earlier auditor replies.
+After the analyst posts the updated record, re-post the human confirmation. For the final fresh-agent test, use a new room `bid-audit-clean` and a new `room-auditor-3`; if `room-auditor-3` is not controller-assigned, use `room-auditor-2` in the record-only room and caption it as a new-session reconstruction. See `examples/northstar/verification/test-runs/clean-audit-runbook.md`. Do not reuse the record room that contains the earlier auditor replies.
 
 ## Prompt to confirm the record
 

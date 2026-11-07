@@ -1,6 +1,8 @@
 # Three-room run evidence
 
-**Status:** Run completed 2026-11-06. The record was corrected, confirmed verbatim by the human, and audited again by `room-auditor-2`. The second audit passed with minor documentation caveats. The first auditor's reconstruction was still in the room, so the second audit is new-agent but not independent; a clean audit is pending.
+**Status:** Run completed 2026-11-06. The record was corrected, confirmed verbatim by the human, and audited again by `room-auditor-2`. The second audit passed with minor documentation caveats. The first auditor's reconstruction was still in the room, so the second audit is new-agent but not independent.
+
+**Follow-up 2026-11-07:** the exact live `bid-decision-record` text and a record-only clean-room audit were captured in `raw/exact-record.md` and `raw/clean-audit.md`. The clean room contained only the record and a new `room-auditor-2` session. The auditor recomputed base 50 and partner 68, listed all nine conditions, and flagged the record's condition-6 and attribution ambiguities. This is a new-session reconstruction, not an independent third-party audit.
 
 **Rooms:**
 
@@ -407,11 +409,11 @@ Run live after the audit. Raw posts and replies are in `examples/northstar/verif
 
 **Decision result:** base 50/100, partner 68/100; conditional bid with partner; nine conditions; no-bid fallback.
 
-**Record result:** corrected, confirmed verbatim by the human, and audited by a second agent. The second audit passed with documentation caveats; the record is conditional, not approved or submitted. A clean independent audit is still pending because the first auditor's reply remained in the room.
+**Record result:** corrected and confirmed verbatim by the human. The exact live document is `raw/exact-record.md`. A record-only audit with a new `room-auditor-2` session is `raw/clean-audit.md`; it recomputed base 50 and partner 68, listed all nine conditions, and flagged the condition-6 and attribution ambiguities. It is a new-session reconstruction, not an independent third-party audit. The record is conditional, not approved or submitted.
 
-**Evidence:** the direct Mattermost JSON exports and post IDs are in `examples/northstar/verification/test-runs/raw/`.
+**Evidence:** the direct Mattermost JSON exports, post IDs, exact record, and clean-audit reply are in `examples/northstar/verification/test-runs/raw/`.
 
-**Remaining evidence gap:** the demo video.
+**Remaining evidence gap:** the demo video and submission.
 
 ## 7. Next actions
 
